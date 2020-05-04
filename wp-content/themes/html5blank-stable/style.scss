@@ -260,15 +260,35 @@ blockquote{
     line-height: 2.4rem;
     text-transform: uppercase;
     background-color: transparent;
+    position: relative;
     border: 1px solid $color-red;
     color: $color-red!important;
-    padding: 6px 8px;
+    padding: 6px 12px;
     transition: 0.5s ease;
     display: inline-block;
-    &:hover, &:active, &:focus{
+   /* &:hover, &:active, &:focus{
         background-color: $color-red;
         color: white!important;
         transition: 0.5s ease;
+    }*/
+    z-index: 0;
+    &:before{
+        content:'';
+        background: $color-red;
+        position:absolute;
+        width:0%;
+        top:0;
+        left:0;
+        height:100%;
+        transition: 0.3s linear;
+        z-index:-1;
+    }
+}
+.button:hover,.button:active,.button:focus{
+    color: white!important;
+    transition: 0.5s ease;
+    &:before{
+        width: 100%;
     }
 }
 
@@ -357,13 +377,16 @@ header{
                         line-height: 2.4rem;
                         color: $color-grey;
                         transition: 0.5s ease;
+                        border-bottom: 1px solid transparent;
+                        padding-bottom: 0.6rem;
                         &:visited{
                             color: inherit!important
                         }
                         &:active, &:hover, &:focus{
                             color: $color-red!important;
-                            //text-decoration: underline!important;
+                            border-bottom: 1px solid $color-red;
                             transition: 0.5s ease;
+                       
                         }
                     }
             }
