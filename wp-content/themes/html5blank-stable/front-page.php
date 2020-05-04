@@ -90,6 +90,7 @@
             <div class="row columns">
                 <div class="col-12 center-text">
                     <h4 class="red"> Ateliers à la une</h4>
+                    <h5>Ateliers<h5>
                 </div>
             </div>
 
@@ -164,6 +165,7 @@
             <div class="row columns">
                 <div class="col-12 center-text">
                     <h4 class="red"> Contact</h4>
+                    <h5>Contact<h5>
                 </div>
             </div>
 
