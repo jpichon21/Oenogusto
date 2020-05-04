@@ -114,7 +114,7 @@ font-style: italic;
 /***********************/
 /** BASE **/
 html {
-  scroll-behavior: smooth;
+  /*scroll-behavior: smooth;*/
   overflow-x: hidden;
   font-size: 62.5% !important; }
   @media (max-width: 1680px) {
@@ -137,6 +137,9 @@ html {
 body, a, p, span, li {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto; }
+
+.has-scroll-smooth body {
+  max-height: calc(100vh - 2.5rem); }
 
 .hidden {
   display: none !important; }
@@ -294,19 +297,21 @@ header nav {
       text-align: left;
       margin: 0rem 2.0rem; }
       header nav ul li a {
-        font-family: 'Montserrat Light';
-        font-size: 1.8rem;
+        font-family: 'Montserrat Regular';
+        font-size: 1.6rem;
         line-height: 2.4rem;
         color: #8a8988;
         transition: 0.5s ease;
         border-bottom: 1px solid transparent;
-        padding-bottom: 0.6rem; }
+        padding-bottom: 0.6rem;
+        opacity: 0.5; }
         header nav ul li a:visited {
           color: inherit !important; }
         header nav ul li a:active, header nav ul li a:hover, header nav ul li a:focus {
           color: #930e0f !important;
           border-bottom: 1px solid #930e0f;
-          transition: 0.5s ease; }
+          transition: 0.5s ease;
+          opacity: 1; }
 
 section .button {
   margin-top: 1.7rem; }
@@ -374,8 +379,8 @@ section .button {
     top: -2rem; }
 
 #AteliersHome {
-  padding-top: 6rem !important;
-  padding-bottom: 6rem !important; }
+  padding-top: 12rem !important;
+  padding-bottom: 26rem !important; }
 
 #ContactHome {
   padding-top: 16rem !important;

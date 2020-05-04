@@ -32,7 +32,7 @@
 		<div class="columns col-12 centered">
 
 			<header class="col-12">
-				<nav id="menuNav" class="column col-12 centered">
+				<nav id="menuNav" class="column col-11 centered">
 					<div id="menuLogo">
 						<a href="<?php echo home_url(); ?>">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/logo-oeno.png">

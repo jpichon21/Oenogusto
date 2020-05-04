@@ -1,5 +1,4 @@
 @import 'include-media.scss';
-
 /*******BREAKPOINTS********/
 $breakpoints: (small: 0px, xsmall: 345px, mobile: 435px, tablet: 768px, large: 1024px, xlarge: 1280px, cardbkp: 1298px, xxlarge: 1440px, laptop: 1680px, hirez: 1780px);
 
@@ -154,7 +153,7 @@ font-style: italic;
 
 /** BASE **/
 html {
-    scroll-behavior: smooth;
+    /*scroll-behavior: smooth;*/
     overflow-x: hidden;
     font-size: 62.5%!important;
    @include media('<=laptop') {
@@ -181,6 +180,10 @@ html {
 body, a,p, span, li {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: auto;
+}
+
+.has-scroll-smooth body {
+    max-height: calc(100vh - 2.5rem);
 }
 
 .hidden{
@@ -315,6 +318,7 @@ body{
     padding: 2.5rem;
     .wrapper{
         background-color: $color-beige!important;
+        //overflow-y: hidden;
     }
     .pageContainer{
         min-height: 100vh;
@@ -380,13 +384,14 @@ header{
             text-align: left;
             margin: 0rem 2.0rem;
                     a{
-                        font-family: 'Montserrat Light';
-                        font-size: 1.8rem;
+                        font-family: 'Montserrat Regular';
+                        font-size: 1.6rem;
                         line-height: 2.4rem;
                         color: $color-grey;
                         transition: 0.5s ease;
                         border-bottom: 1px solid transparent;
                         padding-bottom: 0.6rem;
+                        opacity: 0.5;
                         &:visited{
                             color: inherit!important
                         }
@@ -394,7 +399,7 @@ header{
                             color: $color-red!important;
                             border-bottom: 1px solid $color-red;
                             transition: 0.5s ease;
-                       
+                            opacity: 1;
                         }
                     }
             }
@@ -489,8 +494,8 @@ section{
 }
 
 #AteliersHome{
-    padding-top: 6rem!important;
-    padding-bottom: 6rem!important;
+    padding-top: 12rem!important;
+    padding-bottom: 26rem!important;
 }
 
 #ContactHome{
