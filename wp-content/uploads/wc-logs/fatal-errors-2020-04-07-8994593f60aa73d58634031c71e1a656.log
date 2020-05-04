@@ -1,0 +1,8 @@
+2020-04-07T12:49:37+00:00 CRITICAL Uncaught Error: Call to undefined function get_products() in C:\wamp64\www\Oenogusto\wp-content\themes\html5blank-stable\templates\ateliers.php:10
+Stack trace:
+#0 C:\wamp64\www\Oenogusto\wp-includes\template-loader.php(98): include()
+#1 C:\wamp64\www\Oenogusto\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\O...')
+#2 C:\wamp64\www\Oenogusto\index.php(17): require('C:\\wamp64\\www\\O...')
+#3 {main}
+  thrown dans C:\wamp64\www\Oenogusto\wp-content\themes\html5blank-stable\templates\ateliers.php à la ligne 10
+
