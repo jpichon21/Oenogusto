@@ -1,7 +1,7 @@
 @import 'include-media.scss';
 
 /*******BREAKPOINTS********/
-$breakpoints: (small: 0px, xsmall: 345px, mobile: 435px, tablet: 768px, large: 1024px, xlarge: 1280px, cardbkp: 1298px, xxlarge: 1440px, footerbkp: 1680px, hirez: 1780px);
+$breakpoints: (small: 0px, xsmall: 345px, mobile: 435px, tablet: 768px, large: 1024px, xlarge: 1280px, cardbkp: 1298px, xxlarge: 1440px, laptop: 1680px, hirez: 1780px);
 
 /*******VARIABLES*********/
 $color-beige: #f7f6f3;
@@ -156,14 +156,23 @@ font-style: italic;
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    font-size: 63.5%!important;
-   @include media('<=xxlarge') {
+    font-size: 60.5%!important;
+   @include media('<=laptop') {
         font-size: 55.5%!important;
     }
    @include media('>=hirez') {
         font-size: 76.5%!important;
     }
 }
+
+html::-webkit-scrollbar {
+    display: none;
+  }
+  
+/* Hide scrollbar for IE and Edge */
+html {
+    -ms-overflow-style: none;
+  }
 
 * {
     box-sizing: border-box;
@@ -205,31 +214,28 @@ a:hover {
 
 
 /** GENERAL FONTS AND STYLES **/
-a:visited{
-    color: inherit!important
-}
 a:hover, a:active, a:focus{
     color: $color-red!important;
 }
 
 h1, h2{
     font-family: 'Montserrat Regular';
-    font-size: 4.8rem;
-    line-height: 4.8rem;
+    font-size: 4.8rem !important;
+    line-height: 4.8rem !important;
 }
 
 h3{
     font-family: 'Montserrat Regular';
-    font-size: 1.8rem;
-    line-height: 2.4rem;
+    font-size: 1.8rem !important;
+    line-height: 2.4rem !important;
 }
 
 h4{
     font-family: freight-big-pro, serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 3.6rem;
-    line-height: 3.6rem;
+    font-size: 3.6rem !important;
+    line-height: 3.6rem!important;
     text-transform: uppercase;
 }
 
@@ -250,15 +256,19 @@ blockquote{
 
 .button{
     font-family: 'Montserrat Regular';
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 2.4rem;
     text-transform: uppercase;
     background-color: transparent;
     border: 1px solid $color-red;
-    color: $color-red;
+    color: $color-red!important;
+    padding: 6px 8px;
+    transition: 0.5s ease;
+    display: inline-block;
     &:hover, &:active, &:focus{
         background-color: $color-red;
-        color: white;
+        color: white!important;
+        transition: 0.5s ease;
     }
 }
 
@@ -273,7 +283,6 @@ blockquote{
 
 
 /** LAYOUT **/
-
 body{
     padding: 2.5rem;
     .wrapper{
@@ -307,11 +316,14 @@ header{
             text-align: left;
             margin: 0rem 2.0rem;
                     a{
-                        font-family: 'Montserrat Regular';
+                        font-family: 'Montserrat Light';
                         font-size: 1.8rem;
                         line-height: 2.4rem;
                         color: $color-grey;
                         transition: 0.5s ease;
+                        &:visited{
+                            color: inherit!important
+                        }
                         &:active, &:hover, &:focus{
                             color: $color-red!important;
                             //text-decoration: underline!important;
@@ -321,4 +333,90 @@ header{
             }
         }
     }
+}
+
+section{
+    .button{
+        margin-top: 1.7rem;
+    }
+}
+
+#HeroContainer, #QuoteContainer{
+    padding: 9.6rem 0rem!important;
+}
+
+#HeroContainer{
+    #HeroCardsContainer{
+        img{
+            width: 16rem;
+            margin-top: -6rem;
+        }
+        .offset{
+            margin: 0rem 1.3rem;
+            padding-top: 6rem;
+        }
+    }
+}
+
+#QuoteContainer{
+    blockquote{
+        border-left: 0px;
+        padding: 0px;
+        margin: 0px;
+        position: relative;
+        &:before{
+            content: "‘‘";
+            font-size: 7.2rem;
+            position: absolute;
+            left: -4rem;
+        }
+        &:after{
+            content: "’’";
+            font-size: 7.2rem;
+            position: absolute;
+            right: 0rem;
+            bottom: -4rem;
+        }
+    }
+    #QuoteTextContainer{
+        padding-top: 18rem;
+    }
+    .separator{
+
+    }
+}
+
+.CTA{
+    margin-top: 6rem!important;
+    margin-bottom: 6rem!important;
+    position: relative;
+    &:before{
+        content: "";
+        width: 12rem;
+        border-bottom: 1px solid #930e0f;
+        height: 4px;
+        display: block;
+        position: absolute;
+        left: -2.4rem;
+        top: 1.6rem;
+    }
+    &:after{
+        content: "";
+        width: 12rem;
+        border-bottom: 1px solid #930e0f;
+        height: 4px;
+        display: block;
+        position: absolute;
+        right: -2.4rem;
+        top: 1.6rem;
+    }
+}
+#ContactHome{
+    padding-top: 6rem!important;
+    padding-bottom: 6rem!important;
+    p, .button{
+        margin-bottom: 7.2rem;
+    }
+
+
 }
