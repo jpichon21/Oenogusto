@@ -13,6 +13,7 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<?php wp_head(); ?>
+		<script src="https://kit.fontawesome.com/6164dace53.js" crossorigin="anonymous"></script>
 		<script>
         // conditionizr.com
         // configure environment tests

@@ -116,7 +116,7 @@ font-style: italic;
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-size: 60.5% !important; }
+  font-size: 62.5% !important; }
   @media (max-width: 1680px) {
     html {
       font-size: 55.5% !important; } }
@@ -226,6 +226,31 @@ body {
   body .pageContainer {
     min-height: 100vh; }
 
+footer {
+  padding: 6rem 0rem; }
+  footer p, footer a, footer a:focus, footer a:hover, footer a:visited {
+    color: #930e0f !important; }
+  footer .row {
+    position: relative; }
+  footer .text-left a {
+    font-family: 'Montserrat Regular';
+    display: block;
+    font-size: 1.6rem;
+    line-height: 3.2rem; }
+  footer .center-text {
+    font-family: 'Montserrat Regular';
+    display: block;
+    font-size: 1.6rem;
+    line-height: 3.2rem; }
+    footer .center-text div {
+      margin-top: 3.4rem; }
+  footer .text-right {
+    margin-top: 3.4rem; }
+    footer .text-right a {
+      font-size: 2.2rem;
+      line-height: 2.2rem;
+      margin-left: 1.2rem; }
+
 header nav {
   text-align: center;
   position: relative; }
@@ -311,8 +336,15 @@ section .button {
     right: -2.4rem;
     top: 1.6rem; }
 
-#ContactHome {
+#AteliersHome {
   padding-top: 6rem !important;
   padding-bottom: 6rem !important; }
+
+#ContactHome {
+  padding-top: 16rem !important;
+  padding-bottom: 8rem !important; }
   #ContactHome p, #ContactHome .button {
     margin-bottom: 7.2rem; }
+  #ContactHome p {
+    font-size: 2.4rem !important;
+    line-height: 3.6rem !important; }
