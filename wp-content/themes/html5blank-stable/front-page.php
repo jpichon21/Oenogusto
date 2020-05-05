@@ -71,7 +71,14 @@
                     </blockquote>
                 </div>
 
-                <div class="col-2 separator"></div>
+                <div class="col-1 separator">
+
+
+                </div>
+                <div class="col-1">
+
+
+                </div>
 
                 <div class="col-5" id="QuoteTextContainer" data-scroll-speed="1">
                     <p>... pour autant, l'approche et les ateliers diversifiés que je vous propose n'ont <span
@@ -123,18 +130,18 @@
                         </div>
                     </div>
                 </div>
-
+               
                 <div class="carousel-item">
-                    <div class="row columns">
+                    <div class="row columns ">
                         <div class="col-5">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_14.jpg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/ateliers_11.jpg">
         
                         </div>
 
                         <div class="col-2"></div>
 
                         <div class="col-5">
-                            <h3 class="red">Le concept Oenogusto</h3>
+                            <h3 class="red">Prochain Session : <span class="date">11.05.2020</span></h3>
                             <h2>Atelier 2 : <span class="red">Initiation à la Dégustation.</span></h2>
                             <p>   
                                 Déguster n’est pas boire mais c’est ressentir, observer, analyser, s’exprimer et partager ses émotions avec ses souvenirs. On ne reconnaît que ce que l’on connaît.
@@ -145,17 +152,17 @@
                     </div>
                 </div>
 
-                <div class="carousel-item">                     
-                    <div class="row columns carousel-item">
+                <div class="carousel-item">
+                    <div class="row columns ">
                         <div class="col-5">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_14.jpg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/ateliers_18.jpg">
         
                         </div>
 
                         <div class="col-2"></div>
 
                         <div class="col-5">
-                            <h3 class="red">Le concept Oenogusto</h3>
+                            <h3 class="red">Prochain Session : <span class="date">11.05.2020</span></h3>
                             <h2>Atelier 3 : <span class="red">Initiation à la Dégustation.</span></h2>
                             <p>   
                                 Déguster n’est pas boire mais c’est ressentir, observer, analyser, s’exprimer et partager ses émotions avec ses souvenirs. On ne reconnaît que ce que l’on connaît.
@@ -165,7 +172,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
         </section>
 
@@ -180,7 +186,7 @@
 
         </section>
 
-        <section id="ContactHome" class="col-12 centered" data-scroll-section>$
+        <section id="ContactHome" class="col-12 centered" data-scroll-section>
             <div class="row columns">
             <div class="col-9 centered center-text">
                     <p>Pour tous projets et réservations, contactez-nous !</p>
@@ -219,7 +225,7 @@
         <?php woocommerce_login_form() ?>
 
     </div>
-    <!--script>
+    <script>
         (function () {
             console.log("test");
             const scroll = new LocomotiveScroll({
@@ -227,14 +233,15 @@
                 smooth: true
             });
         })();
-    </script-->
+    </script>
 
 
     <script>
             $('.carousel-items').slick({
                 dots: true,
                 infinite: true,
-                autoplay: false,
+                autoplay: true,
+                fade: false,
                 speed: 300,
                 slidesToShow: 1,
                 slidesToScroll: 1,

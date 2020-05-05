@@ -116,7 +116,8 @@ font-style: italic;
 html {
   /*scroll-behavior: smooth;*/
   overflow-x: hidden;
-  font-size: 62.5% !important; }
+  font-size: 62.5% !important;
+  position: relative; }
   @media (max-width: 1680px) {
     html {
       font-size: 55.5% !important; } }
@@ -255,7 +256,9 @@ blockquote {
 body {
   padding: 2.5rem; }
   body .wrapper {
-    background-color: #f7f6f3 !important; }
+    background-color: #f7f6f3 !important;
+    overflow-y: hidden;
+    overflow-x: visible; }
   body .pageContainer {
     min-height: 100vh; }
 
@@ -284,38 +287,42 @@ footer {
       line-height: 2.2rem;
       margin-left: 1.2rem; }
 
-header nav {
-  text-align: center;
-  position: relative; }
-  header nav #menuLogo {
-    display: inline-block;
-    margin-top: -2rem !important; }
-    header nav #menuLogo img {
-      width: 16.3rem; }
-  header nav ul {
-    position: absolute;
-    right: 0;
-    top: 2rem; }
-    header nav ul li {
+header {
+  z-index: 10;
+  position: absolute;
+  right: 0; }
+  header nav {
+    text-align: center;
+    position: relative; }
+    header nav #menuLogo {
       display: inline-block;
-      text-align: left;
-      margin: 0rem 2.0rem; }
-      header nav ul li a {
-        font-family: 'Montserrat Regular';
-        font-size: 1.6rem;
-        line-height: 2.4rem;
-        color: #8a8988;
-        transition: 0.5s ease;
-        border-bottom: 1px solid transparent;
-        padding-bottom: 0.6rem;
-        opacity: 0.5; }
-        header nav ul li a:visited {
-          color: inherit !important; }
-        header nav ul li a:active, header nav ul li a:hover, header nav ul li a:focus {
-          color: #930e0f !important;
-          border-bottom: 1px solid #930e0f;
+      margin-top: -2rem !important; }
+      header nav #menuLogo img {
+        width: 16.3rem; }
+    header nav ul {
+      position: absolute;
+      right: 0;
+      top: 2rem; }
+      header nav ul li {
+        display: inline-block;
+        text-align: left;
+        margin: 0rem 2.0rem; }
+        header nav ul li a {
+          font-family: 'Montserrat Regular';
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          color: #8a8988;
           transition: 0.5s ease;
-          opacity: 1; }
+          border-bottom: 1px solid transparent;
+          padding-bottom: 0.6rem;
+          opacity: 0.5; }
+          header nav ul li a:visited {
+            color: inherit !important; }
+          header nav ul li a:active, header nav ul li a:hover, header nav ul li a:focus {
+            color: #930e0f !important;
+            border-bottom: 1px solid #930e0f;
+            transition: 0.5s ease;
+            opacity: 1; }
 
 /** SLIDER **/
 .slick-initialized .slick-slide {
@@ -359,7 +366,7 @@ section .button {
   margin-top: 1.7rem; }
 
 #HeroContainer, #QuoteContainer {
-  padding: 9.6rem 0rem !important; }
+  padding: 18.6rem 0rem !important; }
 
 #HeroContainer #HeroCardsContainer img {
   width: 16rem;
@@ -388,6 +395,10 @@ section .button {
 
 #QuoteContainer #QuoteTextContainer {
   padding-top: 18rem; }
+
+#QuoteContainer .separator {
+  border-right: 1px solid #930e0f;
+  margin: 9.6rem 0rem; }
 
 .CTA {
   margin-top: 6rem !important;
