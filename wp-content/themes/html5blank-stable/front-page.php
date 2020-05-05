@@ -106,14 +106,14 @@
                 <div class="carousel-item">
                     <div class="row columns ">
                         <div class="col-5">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_03.jpg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_14.jpg">
         
                         </div>
 
                         <div class="col-2"></div>
 
                         <div class="col-5">
-                            <h3 class="red">Le concept Oenogusto</h3>
+                            <h3 class="red">Prochain Session : <span class="date">11.05.2020</span></h3>
                             <h2>Atelier 1 : <span class="red">Initiation à la Dégustation.</span></h2>
                             <p>   
                                 Déguster n’est pas boire mais c’est ressentir, observer, analyser, s’exprimer et partager ses émotions avec ses souvenirs. On ne reconnaît que ce que l’on connaît.
@@ -127,7 +127,7 @@
                 <div class="carousel-item">
                     <div class="row columns">
                         <div class="col-5">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_03.jpg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_14.jpg">
         
                         </div>
 
@@ -148,7 +148,7 @@
                 <div class="carousel-item">                     
                     <div class="row columns carousel-item">
                         <div class="col-5">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_03.jpg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_14.jpg">
         
                         </div>
 
@@ -180,7 +180,7 @@
 
         </section>
 
-        <section id="ContactHome" class="col-12 centered" data-scroll-section>
+        <section id="ContactHome" class="col-12 centered" data-scroll-section>$
             <div class="row columns">
             <div class="col-9 centered center-text">
                     <p>Pour tous projets et réservations, contactez-nous !</p>
@@ -219,7 +219,7 @@
         <?php woocommerce_login_form() ?>
 
     </div>
-    <script>
+    <!--script>
         (function () {
             console.log("test");
             const scroll = new LocomotiveScroll({
@@ -227,7 +227,7 @@
                 smooth: true
             });
         })();
-    </script>
+    </script-->
 
 
     <script>
