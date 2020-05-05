@@ -475,14 +475,25 @@ section{
 
 #HeroContainer{
     #HeroCardsContainer{
-        img{
+        .card-container{
+            display: inline-block;
+            position: relative;
             width: 16rem;
-            margin-top: -6rem;
+            &.offset{
+                margin: 0rem 3%;
+                height: 36rem;
+                img{
+                    position: absolute;
+                    top: 0px;
+                   
+                }
+            }
         }
-        .offset{
-            margin: 0rem 1.3rem;
-            padding-top: 6rem;
+        img{
+            width: 100%;
+            margin-top: 6rem;
         }
+    
     }
 }
 

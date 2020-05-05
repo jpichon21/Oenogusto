@@ -368,13 +368,20 @@ section .button {
 #HeroContainer, #QuoteContainer {
   padding: 18.6rem 0rem !important; }
 
-#HeroContainer #HeroCardsContainer img {
-  width: 16rem;
-  margin-top: -6rem; }
+#HeroContainer #HeroCardsContainer .card-container {
+  display: inline-block;
+  position: relative;
+  width: 16rem; }
+  #HeroContainer #HeroCardsContainer .card-container.offset {
+    margin: 0rem 3%;
+    height: 36rem; }
+    #HeroContainer #HeroCardsContainer .card-container.offset img {
+      position: absolute;
+      top: 0px; }
 
-#HeroContainer #HeroCardsContainer .offset {
-  margin: 0rem 1.3rem;
-  padding-top: 6rem; }
+#HeroContainer #HeroCardsContainer img {
+  width: 100%;
+  margin-top: 6rem; }
 
 #QuoteContainer blockquote {
   border-left: 0px;

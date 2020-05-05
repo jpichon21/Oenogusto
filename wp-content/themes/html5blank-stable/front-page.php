@@ -37,9 +37,19 @@
             <div class="row columns">
 
                 <div class="col-5" id="HeroCardsContainer" data-scroll-speed="4" >
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_03.jpg">
-                    <img class="offset" src="<?php echo get_template_directory_uri(); ?>/img/content/home_08.jpg">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_05.jpg">
+
+                <div class="card-container">
+                    <img  src="<?php echo get_template_directory_uri(); ?>/img/content/home_03.jpg">
+                </div>
+
+                <div class="card-container offset">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_08.jpg">
+                </div>
+
+                <div class="card-container">
+                    <img  src="<?php echo get_template_directory_uri(); ?>/img/content/home_05.jpg">
+                </div>
+
                 </div>
 
                 <div class="col-2"></div>
