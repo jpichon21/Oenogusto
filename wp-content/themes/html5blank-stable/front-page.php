@@ -1,33 +1,5 @@
 <?php get_header(); ?>
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title></title>
-
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="https://use.typekit.net/eru5fzs.css">
-    <link rel="stylesheet" src="<?php echo get_template_directory_uri() . '/spectre.min.css'; ?>">
-    <link rel="stylesheet" src="<?php echo get_template_directory_uri() . '/slick.css'; ?>">
-    <link rel="stylesheet" src="<?php echo get_template_directory_uri() . '/slick-theme.css'; ?>">
-    <link rel="stylesheet" src="<?php echo get_template_directory_uri() . '/locomotive-scroll.css'; ?>">
-    <link rel="stylesheet" src="main.css">
-
-    <script src="<?php echo get_template_directory_uri() . '/js/jquery-3.4.1.min.js'; ?>"></script>
-    <script src="<?php echo get_template_directory_uri() . '/js/slick.min.js'; ?>"></script>
-    <script src="<?php echo get_template_directory_uri() . '/js/locomotive-scroll.js'; ?>"></script>
-   
-</head>
 
 <body>
 
@@ -205,82 +177,7 @@
         </section>
 
 
-        <footer class="col-9 centered" data-scroll-section>
-            <div class="row columns">
-
-                <div class="col-5 text-left">
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Politique de confidentialité</a>
-                </div>
-
-                <div class="col-2 center-text">
-                    <div>
-                        <p>©2020 - Oenogusto</p>
-                    </div>
-                </div>
-
-                <div class="col-5 text-right">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-
-
-        </footer>
-
-
-
-
-        <?php woocommerce_login_form() ?>
-
-    </div>
-    <script>
-        (function () {
-            console.log("test");
-            const scroll = new LocomotiveScroll({
-                el: document.querySelector('[data-scroll-container]'),
-                smooth: true
-            });
-        })();
-    </script>
-
-
-    <script>
-            $('.carousel-items').slick({
-                dots: true,
-                infinite: true,
-                autoplay: true,
-                fade: false,
-                speed: 300,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                responsive: [{
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                            dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        </script>
+        <?php get_footer(); ?>
 </body>
 
 

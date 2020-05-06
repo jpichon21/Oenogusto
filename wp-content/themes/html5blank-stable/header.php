@@ -1,12 +1,24 @@
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta charset="<?php bloginfo('charset'); ?>">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+		<link rel="stylesheet" href="https://use.typekit.net/eru5fzs.css">
+		<link rel="stylesheet" src="<?php echo get_template_directory_uri() . '/spectre.min.css'; ?>">
+		<link rel="stylesheet" src="<?php echo get_template_directory_uri() . '/slick.css'; ?>">
+		<link rel="stylesheet" src="<?php echo get_template_directory_uri() . '/slick-theme.css'; ?>">
+		<link rel="stylesheet" src="<?php echo get_template_directory_uri() . '/locomotive-scroll.css'; ?>">
+	
+		<link rel="stylesheet" src="main.css">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,9 +33,15 @@
             assets: '<?php echo get_template_directory_uri(); ?>',
             tests: {}
         });
-        </script>
+		</script>
+		<script src="<?php echo get_template_directory_uri() . '/js/jquery-3.4.1.min.js'; ?>"></script>
+   		<script src="<?php echo get_template_directory_uri() . '/js/slick.min.js'; ?>"></script>
+		<script src="<?php echo get_template_directory_uri() . '/js/locomotive-scroll.js'; ?>"></script>
 
-	</head>
+
+
+
+</head>
 	<body <?php body_class(); ?>>
 
 		<!-- wrapper -->
@@ -39,10 +57,10 @@
 						</a>
 					</div>
 					<ul>
-						<li><a href="">Ateliers</a></li>
-						<li><a href="#">Entreprises</a></li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="./panier">Panier</a></li>
+						<li><a href="./ateliers">Ateliers</a></li>
+						<li><a href="./entreprises">Entreprises</a></li>
+						<li><a href="./contact">Contact</a></li>
+						<li><a href="./panier"><i class="fas fa-shopping-cart" style="margin-right:0.6rem"></i>Panier</a></li>
 					</ul>
 				</nav>
 
