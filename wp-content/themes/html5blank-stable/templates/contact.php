@@ -25,5 +25,9 @@
             <?php echo get_field('contact_form'); ?>
             
         </section>
+        
+<script>
+    $('#contactNav').addClass('active');
+</script>
 
     <?php get_footer(); ?>

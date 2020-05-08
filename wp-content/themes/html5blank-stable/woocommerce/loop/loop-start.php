@@ -19,4 +19,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
+<div class="pageContainer" data-scroll-container>
+
+
+	<!--HEADER HERO -->
+	<section id="TitleContainer" class="col-12 centered " data-scroll-section>
+		<div class="row columns ">
+			<div class="col-12 centered center-text">
+				<h1>Ateliers</h1>
+			</div>
+		</div>
+		<div class="row columns">
+			<div class="col-12 centered">
+				<h5>Ateliers</h5>
+			</div>
+		</div>
+	</section>
+
+	<section id="AteliersContainer" class="col-12 centered" data-scroll-section>
+		<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?> ">

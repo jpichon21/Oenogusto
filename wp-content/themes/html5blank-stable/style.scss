@@ -352,9 +352,10 @@ input[type="submit"]{
 form{
     input, textarea, select{
         width: 100%;
+        max-width: 100%;
         padding: 1rem;
         margin: 0.8rem 1rem;
-        border: 1px solid #ececec;
+        border: none;
         font-family: 'Montserrat Regular', sans-serif;
         font-size: 1.6rem;
     }
@@ -365,6 +366,10 @@ form{
 }
 
 /** LAYOUT **/
+.woocommerce-products-header{ 
+    display : none!important;
+}
+
 body{
     padding: 2.5rem;
     .wrapper{
@@ -422,11 +427,10 @@ header{
         position: relative;
         #menuLogo{
             display: inline-block;
-            margin-top: -2rem!important;
+            margin-top: -1rem!important;
    
             img{
-              
-                width: 16.3rem;
+                width: 14.3rem;
             }
         }
         ul{
@@ -449,7 +453,7 @@ header{
                         &:visited{
                             color: inherit!important
                         }
-                        &:active, &:hover, &:focus{
+                        &:active, &:hover, &:focus, &.active{
                             color: $color-red!important;
                             border-bottom: 1px solid $color-red;
                             transition: 0.5s ease;
@@ -523,6 +527,19 @@ section{
 #TitleContainer{
     padding: 14.6rem 0rem 0.6rem 0rem;
     position: relative;
+    p{
+        position: relative;
+        &:before{
+            content: "";
+            width: 12rem;
+            border-bottom: 1px solid #930e0f;
+            height: 4px;
+            display: block;
+            position: absolute;
+            left: -2.4rem;
+            top: 1.6rem;
+        }
+    }
     .col-9, .col-12{
         position: relative;
     }
@@ -633,7 +650,7 @@ section{
     }
 }
 
-#AteliersHome{
+#AteliersHome, #EntrepriseDemande, #EntrepriseCarte{
     padding-top: 12rem!important;
     padding-bottom: 26rem!important;
     h3{
@@ -645,6 +662,61 @@ section{
     .button{
         margin-top: 0rem;
     }
+    .video-container{
+        height: 65.8rem;
+        max-width: 50.8rem;
+    }
+    .video-container{
+        overflow: hidden;
+        video{
+            height: 100%;
+        }
+    }
+}
+
+#EntrepriseDemande, #EntrepriseCarte{
+    h3{
+        position: relative;
+        margin-top: 9.6rem;
+    }
+
+}
+
+#EntrepriseDemande{
+    h3{
+        &:before{
+            content: "";
+            width: 12rem;
+            border-bottom: 1px solid #930e0f;
+            height: 4px;
+            display: block;
+            position: absolute;
+            left: -12vw;
+            top: 1.6rem;
+        }
+    }
+    video{
+        margin-left: -100%;
+    }
+}
+
+#EntrepriseCarte{
+    h3{
+        &:before{
+            content: "";
+            width: 12rem;
+            border-bottom: 1px solid #930e0f;
+            height: 4px;
+            display: block;
+            position: absolute;
+            right: -12vw;
+            top: 1.6rem;
+        }
+    }
+    video{
+        margin-left: -40%;
+    }
+  
 }
 
 #ContactHome{

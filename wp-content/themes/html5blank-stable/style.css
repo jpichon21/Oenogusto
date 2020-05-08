@@ -274,9 +274,10 @@ input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:fo
 /** FORM **/
 form input, form textarea, form select {
   width: 100%;
+  max-width: 100%;
   padding: 1rem;
   margin: 0.8rem 1rem;
-  border: 1px solid #ececec;
+  border: none;
   font-family: 'Montserrat Regular', sans-serif;
   font-size: 1.6rem; }
 
@@ -284,6 +285,9 @@ form input[type="submit"] {
   width: auto; }
 
 /** LAYOUT **/
+.woocommerce-products-header {
+  display: none !important; }
+
 body {
   padding: 2.5rem; }
   body .wrapper {
@@ -327,9 +331,9 @@ header {
     position: relative; }
     header nav #menuLogo {
       display: inline-block;
-      margin-top: -2rem !important; }
+      margin-top: -1rem !important; }
       header nav #menuLogo img {
-        width: 16.3rem; }
+        width: 14.3rem; }
     header nav ul {
       position: absolute;
       right: 0;
@@ -349,7 +353,7 @@ header {
           opacity: 0.5; }
           header nav ul li a:visited {
             color: inherit !important; }
-          header nav ul li a:active, header nav ul li a:hover, header nav ul li a:focus {
+          header nav ul li a:active, header nav ul li a:hover, header nav ul li a:focus, header nav ul li a.active {
             color: #930e0f !important;
             border-bottom: 1px solid #930e0f;
             transition: 0.5s ease;
@@ -404,6 +408,17 @@ section .button {
 #TitleContainer {
   padding: 14.6rem 0rem 0.6rem 0rem;
   position: relative; }
+  #TitleContainer p {
+    position: relative; }
+    #TitleContainer p:before {
+      content: "";
+      width: 12rem;
+      border-bottom: 1px solid #930e0f;
+      height: 4px;
+      display: block;
+      position: absolute;
+      left: -2.4rem;
+      top: 1.6rem; }
   #TitleContainer .col-9, #TitleContainer .col-12 {
     position: relative; }
   #TitleContainer h1 {
@@ -486,15 +501,52 @@ section .button {
     margin-right: auto;
     top: -2rem; }
 
-#AteliersHome {
+#AteliersHome, #EntrepriseDemande, #EntrepriseCarte {
   padding-top: 12rem !important;
   padding-bottom: 26rem !important; }
-  #AteliersHome h3 {
+  #AteliersHome h3, #EntrepriseDemande h3, #EntrepriseCarte h3 {
     margin-bottom: 2.2rem; }
-  #AteliersHome h2, #AteliersHome p {
+  #AteliersHome h2, #AteliersHome p, #EntrepriseDemande h2, #EntrepriseDemande p, #EntrepriseCarte h2, #EntrepriseCarte p {
     margin-bottom: 3.2rem; }
-  #AteliersHome .button {
+  #AteliersHome .button, #EntrepriseDemande .button, #EntrepriseCarte .button {
     margin-top: 0rem; }
+  #AteliersHome .video-container, #EntrepriseDemande .video-container, #EntrepriseCarte .video-container {
+    height: 65.8rem;
+    max-width: 50.8rem; }
+  #AteliersHome .video-container, #EntrepriseDemande .video-container, #EntrepriseCarte .video-container {
+    overflow: hidden; }
+    #AteliersHome .video-container video, #EntrepriseDemande .video-container video, #EntrepriseCarte .video-container video {
+      height: 100%; }
+
+#EntrepriseDemande h3, #EntrepriseCarte h3 {
+  position: relative;
+  margin-top: 9.6rem; }
+
+#EntrepriseDemande h3:before {
+  content: "";
+  width: 12rem;
+  border-bottom: 1px solid #930e0f;
+  height: 4px;
+  display: block;
+  position: absolute;
+  left: -12vw;
+  top: 1.6rem; }
+
+#EntrepriseDemande video {
+  margin-left: -100%; }
+
+#EntrepriseCarte h3:before {
+  content: "";
+  width: 12rem;
+  border-bottom: 1px solid #930e0f;
+  height: 4px;
+  display: block;
+  position: absolute;
+  right: -12vw;
+  top: 1.6rem; }
+
+#EntrepriseCarte video {
+  margin-left: -40%; }
 
 #ContactHome {
   padding-top: 16rem !important;

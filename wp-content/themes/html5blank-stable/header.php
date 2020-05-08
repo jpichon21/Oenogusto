@@ -17,6 +17,7 @@
 		<link rel="stylesheet" src="<?php echo get_template_directory_uri() . '/slick.css'; ?>">
 		<link rel="stylesheet" src="<?php echo get_template_directory_uri() . '/slick-theme.css'; ?>">
 		<link rel="stylesheet" src="<?php echo get_template_directory_uri() . '/locomotive-scroll.css'; ?>">
+		<link rel="stylesheet" src="<?php echo get_template_directory_uri() . '/animate.css'; ?>">
 	
 		<link rel="stylesheet" src="main.css">
 
@@ -37,8 +38,10 @@
 		<script src="<?php echo get_template_directory_uri() . '/js/jquery-3.4.1.min.js'; ?>"></script>
    		<script src="<?php echo get_template_directory_uri() . '/js/slick.min.js'; ?>"></script>
 		<script src="<?php echo get_template_directory_uri() . '/js/locomotive-scroll.js'; ?>"></script>
-
-
+		<script src="<?php echo get_template_directory_uri() . '/js/wow.js'; ?>"></script>
+		<script>
+              new WOW().init();
+        </script>
 
 
 </head>
@@ -57,10 +60,10 @@
 						</a>
 					</div>
 					<ul>
-						<li><a href="./ateliers">Ateliers</a></li>
-						<li><a href="./entreprises">Entreprises</a></li>
-						<li><a href="./contact">Contact</a></li>
-						<li><a href="./panier"><i class="fas fa-shopping-cart" style="margin-right:0.6rem"></i>Panier</a></li>
+						<li><a id="ateliersNav" href="./ateliers">Ateliers</a></li>
+						<li><a id="entrepriseNav" href="./entreprises">Entreprises</a></li>
+						<li><a id="contactNav" href="./contact">Contact</a></li>
+						<li><a id="cartNav" href="./panier"><i class="fas fa-shopping-cart" style="margin-right:0.6rem"></i>Panier</a></li>
 					</ul>
 				</nav>
 

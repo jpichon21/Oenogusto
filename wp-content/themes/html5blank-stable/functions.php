@@ -363,7 +363,8 @@ function enqueue_styles() {
     wp_enqueue_style('slick'); // Enqueue it!
     wp_register_style('locomotive', get_template_directory_uri() . '/css/locomotive-scroll.css', array(), '1.0', 'all');
     wp_enqueue_style('locomotive'); // Enqueue it!
-  
+    wp_register_style('animate', get_template_directory_uri() . '/css/animate.css', array(), '1.0', 'all');
+    wp_enqueue_style('animate'); // Enqueue it!
 }
 
 function enqueue_script() {
@@ -371,7 +372,8 @@ function enqueue_script() {
     wp_enqueue_script('jquery'); // Enqueue it!
     wp_register_script('slick', '/js/slick.min.js', array(), '1.0');
     wp_enqueue_script('slick'); // Enqueue it!
- 
+    wp_register_script('wow', '/js/wow.js', array(), '1.0');
+    wp_enqueue_script('wow'); // Enqueue it!
 }
 
 // Remove Actions
@@ -388,6 +390,12 @@ remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 ); // Remove related products
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
+remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
 
 // Add Filters
 add_filter('avatar_defaults', 'html5blankgravatar'); // Custom Gravatar in Settings > Discussion

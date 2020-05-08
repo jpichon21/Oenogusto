@@ -8,25 +8,25 @@
         <section id="HeroContainer" class="col-9 centered" data-scroll-section>
             <div class="row columns">
 
-                <div class="col-5" id="HeroCardsContainer" data-scroll-speed="4" >
+                <div class="col-5" id="HeroCardsContainer" data-scroll-speed="4">
 
-                <div class="card-container">
-                    <img  src="<?php echo get_template_directory_uri(); ?>/img/content/home_03.jpg">
-                </div>
+                    <div class="card-container">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_03.jpg">
+                    </div>
 
-                <div class="card-container offset">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_08.jpg">
-                </div>
+                    <div class="card-container offset">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_08.jpg">
+                    </div>
 
-                <div class="card-container">
-                    <img  src="<?php echo get_template_directory_uri(); ?>/img/content/home_05.jpg">
-                </div>
+                    <div class="card-container">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_05.jpg">
+                    </div>
 
                 </div>
 
                 <div class="col-2"></div>
 
-                <div class="col-5" data-scroll-speed="2" >
+                <div class="col-5" data-scroll-speed="2">
                     <h3 class="red">Le concept Oenogusto</h3>
                     <h2>Dégustez <span class="red">& partez à la découverte du </span> monde du vin <span class="red">et
                             de ses parfums.</span></h2>
@@ -49,7 +49,7 @@
                     <blockquote>
                         Titulaire d’un Doctorat en Œnologie, obtenu à
                         l’Institut Universitaire de la Vigne et du Vin, à Dijon, j’ai notamment travaillé sur l’origine
-                        et l’identification des arômes du cépage emblématique de la Bourgogne qu’est Pinot noir. 
+                        et l’identification des arômes du cépage emblématique de la Bourgogne qu’est Pinot noir.
                     </blockquote>
                 </div>
 
@@ -95,8 +95,8 @@
                 <div class="carousel-item">
                     <div class="row columns ">
                         <div class="col-5">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/home_14.jpg">
-        
+
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/ateliers_18.jpg">
                         </div>
 
                         <div class="col-2"></div>
@@ -104,20 +104,21 @@
                         <div class="col-5">
                             <h3 class="red">Prochain Session : <span class="date">11.05.2020</span></h3>
                             <h2>Atelier 1 : <span class="red">Initiation à la Dégustation.</span></h2>
-                            <p>   
-                                Déguster n’est pas boire mais c’est ressentir, observer, analyser, s’exprimer et partager ses émotions avec ses souvenirs. On ne reconnaît que ce que l’on connaît.
+                            <p>
+                                Déguster n’est pas boire mais c’est ressentir, observer, analyser, s’exprimer et
+                                partager ses émotions avec ses souvenirs. On ne reconnaît que ce que l’on connaît.
                                 Ayez confiance en vos sens et efforcez vous d’exprimer ce que vous ressentez du vin.
                             </p>
                             <a href="#" class="button"> Réserver cet atelier </a>
                         </div>
                     </div>
                 </div>
-               
+
                 <div class="carousel-item">
                     <div class="row columns ">
                         <div class="col-5">
                             <img src="<?php echo get_template_directory_uri(); ?>/img/content/ateliers_11.jpg">
-        
+
                         </div>
 
                         <div class="col-2"></div>
@@ -125,8 +126,9 @@
                         <div class="col-5">
                             <h3 class="red">Prochain Session : <span class="date">11.05.2020</span></h3>
                             <h2>Atelier 2 : <span class="red">Initiation à la Dégustation.</span></h2>
-                            <p>   
-                                Déguster n’est pas boire mais c’est ressentir, observer, analyser, s’exprimer et partager ses émotions avec ses souvenirs. On ne reconnaît que ce que l’on connaît.
+                            <p>
+                                Déguster n’est pas boire mais c’est ressentir, observer, analyser, s’exprimer et
+                                partager ses émotions avec ses souvenirs. On ne reconnaît que ce que l’on connaît.
                                 Ayez confiance en vos sens et efforcez vous d’exprimer ce que vous ressentez du vin.
                             </p>
                             <a href="#" class="button"> Réserver cet atelier </a>
@@ -138,7 +140,7 @@
                     <div class="row columns ">
                         <div class="col-5">
                             <img src="<?php echo get_template_directory_uri(); ?>/img/content/ateliers_18.jpg">
-        
+
                         </div>
 
                         <div class="col-2"></div>
@@ -146,8 +148,9 @@
                         <div class="col-5">
                             <h3 class="red">Prochain Session : <span class="date">11.05.2020</span></h3>
                             <h2>Atelier 3 : <span class="red">Initiation à la Dégustation.</span></h2>
-                            <p>   
-                                Déguster n’est pas boire mais c’est ressentir, observer, analyser, s’exprimer et partager ses émotions avec ses souvenirs. On ne reconnaît que ce que l’on connaît.
+                            <p>
+                                Déguster n’est pas boire mais c’est ressentir, observer, analyser, s’exprimer et
+                                partager ses émotions avec ses souvenirs. On ne reconnaît que ce que l’on connaît.
                                 Ayez confiance en vos sens et efforcez vous d’exprimer ce que vous ressentez du vin.
                             </p>
                             <a href="#" class="button"> Réserver cet atelier </a>
@@ -170,10 +173,10 @@
 
         <section id="ContactHome" class="col-12 centered" data-scroll-section>
             <div class="row columns">
-            <div class="col-9 centered center-text">
+                <div class="col-9 centered center-text">
                     <p>Pour tous projets et réservations, contactez-nous !</p>
-                    <a href="#" class="button"> Contacter Oenogusto </a>
-            </div>
+                    <a href="./contact" class="button"> Contacter Oenogusto </a>
+                </div>
         </section>
 
 
