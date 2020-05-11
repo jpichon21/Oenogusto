@@ -37,7 +37,7 @@
                         Tous vos sens seront en éveil le temps d’une
                         expérience inédite !
                     </p>
-                    <a href="#" class="button"> Découvrir les ateliers </a>
+                    <a href="./ateliers" class="button"> Découvrir les ateliers </a>
                 </div>
             </div>
         </section>

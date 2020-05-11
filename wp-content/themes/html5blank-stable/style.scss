@@ -230,8 +230,10 @@ a:hover, a:active, a:focus{
 
 h1, h2{
     font-family: 'Montserrat Regular';
-    font-size: 4.8rem !important;
-    line-height: 4.8rem !important;
+    //font-size: 4.8rem !important;
+    //line-height: 4.8rem !important;
+    font-size: 3.8rem !important;
+    line-height: 3.8rem !important;
 }
 
 h3{
@@ -339,6 +341,9 @@ input[type="submit"]{
     }
 }
 
+aside{
+    display: none!important;
+}
 
 .black{
     color: $color-black;
@@ -376,8 +381,7 @@ body{
     padding: 2.5rem;
     .wrapper{
         background-color: $color-beige!important;
-        overflow-y: hidden;
-        overflow-x: visible;
+        overflow: hidden;
     }
     .pageContainer{
         min-height: 100vh;
@@ -385,7 +389,7 @@ body{
 }
 
 footer{
-    padding: 6rem 0rem;
+    padding: 6rem 0rem 12rem 0rem;
     p, a, a:focus, a:hover, a:visited{
         color: $color-red!important;
     }
@@ -429,10 +433,10 @@ header{
         position: relative;
         #menuLogo{
             display: inline-block;
-            margin-top: -1rem!important;
+            margin-top: -2rem!important;
    
             img{
-                width: 14.3rem;
+                width: 14.0rem;
             }
         }
         ul{
@@ -445,7 +449,7 @@ header{
             margin: 0rem 2.0rem;
                     a{
                         font-family: 'Montserrat Regular';
-                        font-size: 1.6rem;
+                        font-size: 1.4rem;
                         line-height: 2.4rem;
                         color: $color-grey;
                         transition: 0.5s ease;
@@ -742,19 +746,53 @@ section{
     }
     .row-increment{
         counter-increment: div;
+        &:nth-child(2n){
+            .counter-increment-container{
+                position: relative;
+                &:before{
+                        content: "";
+                        width: 20rem;
+                        border-bottom: 1px solid #930e0f;
+                        height: 4px;
+                        display: block;
+                        position: absolute;
+                        left: 12.4rem;
+                        top: 5.6rem;
+                }
+            }
+            .counter-container{
+                flex-direction: row;
+            }
+        }
     }
     .atelier-card{
-        padding: 8rem 0rem;
+        padding: 10rem 0rem 10rem 0rem;
+    }
+    .counter-container{
+        flex-direction: row-reverse;
     }
     .woocommerce img, .woocommerce-page img{
         width: 100%;
+    }
+    .counter-increment-container{
+        position: relative;
+        &:before{
+                content: "";
+                width: 20rem;
+                border-bottom: 1px solid #930e0f;
+                height: 4px;
+                display: block;
+                position: absolute;
+                right: 12.4rem;
+                top: 5.6rem;
+        }
     }
     .counter-increment{
         padding-top: 4.8rem;
         text-align: center;
         &:before{
             content:  "0" counters(div, '') ;
-            font-size: 4.8rem;
+            font-size: 6.0rem;
             opacity: 0.1;
         }
     }

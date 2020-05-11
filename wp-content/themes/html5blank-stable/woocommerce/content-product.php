@@ -75,7 +75,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 				?>
 			</div>
 
-			<div class="col-1">
+			<div class="col-1 counter-increment-container">
 				<p class="counter-increment"></p>
 			</div>
 

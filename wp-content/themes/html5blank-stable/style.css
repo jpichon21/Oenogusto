@@ -174,8 +174,8 @@ a:hover, a:active, a:focus {
 
 h1, h2 {
   font-family: 'Montserrat Regular';
-  font-size: 4.8rem !important;
-  line-height: 4.8rem !important; }
+  font-size: 3.8rem !important;
+  line-height: 3.8rem !important; }
 
 h3 {
   font-family: 'Montserrat Regular';
@@ -266,6 +266,9 @@ blockquote {
 input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
   background: #930e0f; }
 
+aside {
+  display: none !important; }
+
 .black {
   color: #0e0e0e; }
 
@@ -293,13 +296,12 @@ body {
   padding: 2.5rem; }
   body .wrapper {
     background-color: #f7f6f3 !important;
-    overflow-y: hidden;
-    overflow-x: visible; }
+    overflow: hidden; }
   body .pageContainer {
     min-height: 100vh; }
 
 footer {
-  padding: 6rem 0rem; }
+  padding: 6rem 0rem 12rem 0rem; }
   footer p, footer a, footer a:focus, footer a:hover, footer a:visited {
     color: #930e0f !important; }
   footer .row {
@@ -332,9 +334,9 @@ header {
     position: relative; }
     header nav #menuLogo {
       display: inline-block;
-      margin-top: -1rem !important; }
+      margin-top: -2rem !important; }
       header nav #menuLogo img {
-        width: 14.3rem; }
+        width: 14.0rem; }
     header nav ul {
       position: absolute;
       right: 0;
@@ -345,7 +347,7 @@ header {
         margin: 0rem 2.0rem; }
         header nav ul li a {
           font-family: 'Montserrat Regular';
-          font-size: 1.6rem;
+          font-size: 1.4rem;
           line-height: 2.4rem;
           color: #8a8988;
           transition: 0.5s ease;
@@ -566,17 +568,45 @@ section .button {
 
 #AteliersContainer .row-increment {
   counter-increment: div; }
+  #AteliersContainer .row-increment:nth-child(2n) .counter-increment-container {
+    position: relative; }
+    #AteliersContainer .row-increment:nth-child(2n) .counter-increment-container:before {
+      content: "";
+      width: 20rem;
+      border-bottom: 1px solid #930e0f;
+      height: 4px;
+      display: block;
+      position: absolute;
+      left: 12.4rem;
+      top: 5.6rem; }
+  #AteliersContainer .row-increment:nth-child(2n) .counter-container {
+    flex-direction: row; }
 
 #AteliersContainer .atelier-card {
-  padding: 8rem 0rem; }
+  padding: 10rem 0rem 10rem 0rem; }
+
+#AteliersContainer .counter-container {
+  flex-direction: row-reverse; }
 
 #AteliersContainer .woocommerce img, #AteliersContainer .woocommerce-page img {
   width: 100%; }
+
+#AteliersContainer .counter-increment-container {
+  position: relative; }
+  #AteliersContainer .counter-increment-container:before {
+    content: "";
+    width: 20rem;
+    border-bottom: 1px solid #930e0f;
+    height: 4px;
+    display: block;
+    position: absolute;
+    right: 12.4rem;
+    top: 5.6rem; }
 
 #AteliersContainer .counter-increment {
   padding-top: 4.8rem;
   text-align: center; }
   #AteliersContainer .counter-increment:before {
     content: "0" counters(div, "");
-    font-size: 4.8rem;
+    font-size: 6.0rem;
     opacity: 0.1; }

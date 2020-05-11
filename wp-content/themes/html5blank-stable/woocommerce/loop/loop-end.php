@@ -21,5 +21,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 </ul>
-</div>
 </section>
+	<script>
+		$('#ateliersNav').addClass('active');
+	</script>
+	<?php get_footer(); ?>
+</div>
+
