@@ -308,35 +308,37 @@ function html5blankcomments($comment, $args, $depth)
 		$add_below = 'div-comment';
 	}
 ?>
-    <!-- heads up: starting < for the html tag (li or div) in the next line: -->
-    <<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
-	<?php if ( 'div' != $args['style'] ) : ?>
-	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-	<?php endif; ?>
-	<div class="comment-author vcard">
-	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['180'] ); ?>
-	<?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
-	</div>
-<?php if ($comment->comment_approved == '0') : ?>
-	<em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
-	<br />
-<?php endif; ?>
+<!-- heads up: starting < for the html tag (li or div) in the next line: -->
+<<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?>
+    id="comment-<?php comment_ID() ?>">
+    <?php if ( 'div' != $args['style'] ) : ?>
+    <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+        <?php endif; ?>
+        <div class="comment-author vcard">
+            <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['180'] ); ?>
+            <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
+        </div>
+        <?php if ($comment->comment_approved == '0') : ?>
+        <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
+        <br />
+        <?php endif; ?>
 
-	<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
-		<?php
+        <div class="comment-meta commentmetadata"><a
+                href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
+                <?php
 			printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
 		?>
-	</div>
+        </div>
 
-	<?php comment_text() ?>
+        <?php comment_text() ?>
 
-	<div class="reply">
-	<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-	</div>
-	<?php if ( 'div' != $args['style'] ) : ?>
-	</div>
-	<?php endif; ?>
-<?php }
+        <div class="reply">
+            <?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+        </div>
+        <?php if ( 'div' != $args['style'] ) : ?>
+    </div>
+    <?php endif; ?>
+    <?php }
 
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
@@ -374,6 +376,72 @@ function enqueue_script() {
     wp_enqueue_script('slick'); // Enqueue it!
     wp_register_script('wow', '/js/wow.js', array(), '1.0');
     wp_enqueue_script('wow'); // Enqueue it!
+}
+
+// Modifier les images de la page ateliers
+function wpse_287488_product_thumbnail_size( $size ) {
+    return 'full';
+}
+
+// Rendre les images de la page ateliers cliquables
+    if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {
+        /**
+        * Get the product thumbnail, or the placeholder if not set.
+        *
+        * @subpackage Loop
+        * @param string $size (default: 'shop_catalog')
+        * @param int $deprecated1 Deprecated since WooCommerce 2.0 (default: 0)
+        * @param int $deprecated2 Deprecated since WooCommerce 2.0 (default: 0)
+        * @return string
+        */
+        function woocommerce_get_product_thumbnail( $size = 'full', $deprecated1 = 0, $deprecated2 = 0 ) {
+        global $post;
+        if ( has_post_thumbnail() ) {
+        return '<a href="' . get_permalink( $post->ID ) . '">' . get_the_post_thumbnail( $post->ID, $size ) . '</a>';
+        } elseif ( wc_placeholder_img_src() ) {
+        return wc_placeholder_img( $size );
+        }
+        }
+    }
+// Replace add to cart button by a linked button to the product in Shop and archives pages
+add_filter( 'woocommerce_loop_add_to_cart_link', 'replace_loop_add_to_cart_button', 10, 2 );
+function replace_loop_add_to_cart_button( $button, $product  ) {
+    // Not needed for variable products
+    if( $product->is_type( 'variable' ) ) return $button;
+
+    // Button text here
+    $button_text = __( "Réserver cet atelier" );
+
+    return '<a class="button" id="SeeButton" href="' . $product->get_permalink() . '">' . $button_text . '</a>';
+}
+
+//  Customiser le titre
+remove_action('woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title',10);
+add_action('woocommerce_shop_loop_item_title','change_title',10);
+function change_title() {
+    ?>
+    <h3 class="red">Ateliers Oenologiques</h3>
+    <h2>
+        <?php 
+                global $product;
+                $product->get_sku();
+                the_title(); 
+        ?>
+    </h2>
+    <?php
+}
+
+// Show Excerpts
+add_action( 'woocommerce_shop_loop_item_title', 'show_excerpt' );
+function show_excerpt() {
+   
+        global $product;
+        if ( $product->get_short_description() ) {
+            echo '<p>';
+            echo $product->get_short_description();
+            echo '</p>';
+    }
+    
 }
 
 // Remove Actions
@@ -414,6 +482,7 @@ add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
+add_filter( 'single_product_archive_thumbnail_size', 'wpse_287488_product_thumbnail_size' ); // image pleine
 
 // Options Page
 if( function_exists('acf_add_options_page') ) {
@@ -490,5 +559,3 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 
 
 ?>
-
-

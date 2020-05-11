@@ -4,7 +4,7 @@
 
 
 <section>
-    <h1>Ateliers</h1>
+    <h1>Nos Ateliers</h1>
 </section>
 
 <?php get_footer(); ?>

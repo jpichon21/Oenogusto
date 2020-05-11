@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<section id="TitleContainer" class="col-12 centered " data-scroll-section>
 		<div class="row columns ">
 			<div class="col-12 centered center-text">
-				<h1>Ateliers</h1>
+				<h1>Nos Ateliers</h1>
 			</div>
 		</div>
 		<div class="row columns">

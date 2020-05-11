@@ -228,8 +228,8 @@ blockquote {
     position: absolute;
     bottom: -4rem; }
 
-.button, input[type="submit"] {
-  font-family: 'Montserrat Regular';
+.button, #SeeButton, input[type="submit"] {
+  font-family: 'Montserrat Light';
   font-size: 1.4rem;
   line-height: 2.4rem;
   text-transform: uppercase;
@@ -240,13 +240,14 @@ blockquote {
   padding: 4px 14px;
   transition: 0.5s ease;
   display: inline-block;
+  border-radius: 0px;
   /* &:hover, &:active, &:focus{
         background-color: $color-red;
         color: white!important;
         transition: 0.5s ease;
     }*/
   z-index: 0; }
-  .button:before, input[type="submit"]:before {
+  .button:before, #SeeButton:before, input[type="submit"]:before {
     content: '';
     background: #930e0f;
     position: absolute;
@@ -256,10 +257,10 @@ blockquote {
     height: 100%;
     transition: 0.3s linear;
     z-index: -1; }
-  .button:hover, .button:active, .button:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
+  .button:hover, .button:active, .button:focus, #SeeButton:hover, #SeeButton:active, #SeeButton:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
     color: white !important;
     transition: 0.5s ease; }
-    .button:hover:before, .button:active:before, .button:focus:before, input[type="submit"]:hover:before, input[type="submit"]:active:before, input[type="submit"]:focus:before {
+    .button:hover:before, .button:active:before, .button:focus:before, #SeeButton:hover:before, #SeeButton:active:before, #SeeButton:focus:before, input[type="submit"]:hover:before, input[type="submit"]:active:before, input[type="submit"]:focus:before {
       width: 100%; }
 
 input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
@@ -556,3 +557,26 @@ section .button {
   #ContactHome p {
     font-size: 2.4rem !important;
     line-height: 3.6rem !important; }
+
+#AteliersContainer p {
+  margin: 0rem 0rem 3.2rem 0rem; }
+
+#AteliersContainer .row-increment:first-child {
+  counter-reset: div; }
+
+#AteliersContainer .row-increment {
+  counter-increment: div; }
+
+#AteliersContainer .atelier-card {
+  padding: 8rem 0rem; }
+
+#AteliersContainer .woocommerce img, #AteliersContainer .woocommerce-page img {
+  width: 100%; }
+
+#AteliersContainer .counter-increment {
+  padding-top: 4.8rem;
+  text-align: center; }
+  #AteliersContainer .counter-increment:before {
+    content: "0" counters(div, "");
+    font-size: 4.8rem;
+    opacity: 0.1; }

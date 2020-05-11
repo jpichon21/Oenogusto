@@ -24,48 +24,61 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div class="row columns">
-	<div class="col-9 centered atelier-card" data-scroll>
-		<li <?php wc_product_class( '', $product ); ?>>
-			<?php
-			/**
-			 * Hook: woocommerce_before_shop_loop_item.
-			 *
-			 * @hooked woocommerce_template_loop_product_link_open - 10
-			 */
-			do_action( 'woocommerce_before_shop_loop_item' );
+<div class="row columns row-increment">
+	<div class="col-10 centered atelier-card" data-scroll>
+		<div class="row columns counter-container">
 
-			/**
-			 * Hook: woocommerce_before_shop_loop_item_title.
-			 *
-			 * @hooked woocommerce_show_product_loop_sale_flash - 10
-			 * @hooked woocommerce_template_loop_product_thumbnail - 10
-			 */
-			do_action( 'woocommerce_before_shop_loop_item_title' );
+			<div class="col-5" >
+				<?php
+				/**
+				 * Hook: woocommerce_before_shop_loop_item.
+				 *
+				 * @hooked woocommerce_template_loop_product_link_open - 10
+				 */
+				//do_action( 'woocommerce_before_shop_loop_item' );
 
-			/**
-			 * Hook: woocommerce_shop_loop_item_title.
-			 *
-			 * @hooked woocommerce_template_loop_product_title - 10
-			 */
-			do_action( 'woocommerce_shop_loop_item_title' );
+				/**
+				 * Hook: woocommerce_before_shop_loop_item_title.
+				 *
+				 * @hooked woocommerce_show_product_loop_sale_flash - 10
+				 * @hooked woocommerce_template_loop_product_thumbnail - 10
+				 */
+				do_action( 'woocommerce_before_shop_loop_item_title' ); ?>
+			</div>
 
-			/**
-			 * Hook: woocommerce_after_shop_loop_item_title.
-			 *
-			 * @hooked woocommerce_template_loop_rating - 5
-			 * @hooked woocommerce_template_loop_price - 10
-			 */
-			do_action( 'woocommerce_after_shop_loop_item_title' );
+			<div class="col-2"></div>
+		
+			<div class="col-4">
+				<?php
+				/**
+				 * Hook: woocommerce_shop_loop_item_title.
+				 *
+				 * @hooked woocommerce_template_loop_product_title - 10
+				 */
+				do_action( 'woocommerce_shop_loop_item_title' );
 
-			/**
-			 * Hook: woocommerce_after_shop_loop_item.
-			 *
-			 * @hooked woocommerce_template_loop_product_link_close - 5
-			 * @hooked woocommerce_template_loop_add_to_cart - 10
-			 */
-			do_action( 'woocommerce_after_shop_loop_item' );
-			?>
-		</li>
+				/**
+				 * Hook: woocommerce_after_shop_loop_item_title.
+				 *
+				 * @hooked woocommerce_template_loop_rating - 5
+				 * @hooked woocommerce_template_loop_price - 10
+				 */
+				//do_action( 'woocommerce_after_shop_loop_item_title' );
+
+				/**
+				 * Hook: woocommerce_after_shop_loop_item.
+				 *
+				 * @hooked woocommerce_template_loop_product_link_close - 5
+				 * @hooked woocommerce_template_loop_add_to_cart - 10
+				 */
+				do_action( 'woocommerce_after_shop_loop_item' );
+				?>
+			</div>
+
+			<div class="col-1">
+				<p class="counter-increment"></p>
+			</div>
+
+		</div>
 	</div>
 </div>

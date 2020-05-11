@@ -294,8 +294,8 @@ blockquote{
         }
 }
 
-.button, input[type="submit"]{
-    font-family: 'Montserrat Regular';
+.button, #SeeButton, input[type="submit"]{
+    font-family: 'Montserrat Light';
     font-size: 1.4rem;
     line-height: 2.4rem;
     text-transform: uppercase;
@@ -306,6 +306,7 @@ blockquote{
     padding: 4px 14px;
     transition: 0.5s ease;
     display: inline-block;
+    border-radius: 0px;
    /* &:hover, &:active, &:focus{
         background-color: $color-red;
         color: white!important;
@@ -369,6 +370,7 @@ form{
 .woocommerce-products-header{ 
     display : none!important;
 }
+
 
 body{
     padding: 2.5rem;
@@ -731,3 +733,29 @@ section{
     }
 }
 
+#AteliersContainer{
+    p{
+        margin: 0rem 0rem 3.2rem 0rem;
+    }
+    .row-increment:first-child{
+        counter-reset: div;
+    }
+    .row-increment{
+        counter-increment: div;
+    }
+    .atelier-card{
+        padding: 8rem 0rem;
+    }
+    .woocommerce img, .woocommerce-page img{
+        width: 100%;
+    }
+    .counter-increment{
+        padding-top: 4.8rem;
+        text-align: center;
+        &:before{
+            content:  "0" counters(div, '') ;
+            font-size: 4.8rem;
+            opacity: 0.1;
+        }
+    }
+}
