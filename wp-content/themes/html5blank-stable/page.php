@@ -1,11 +1,23 @@
 <?php get_header(); ?>
 
-	<main role="main">
+<div class="pageContainer" data-scroll-container>
 		<!-- section -->
-		<section>
+		
+	<!--HEADER HERO -->
+	<section id="TitleContainer" class="col-12 centered " data-scroll-section>
+		<div class="row columns ">
+			<div class="col-12 centered center-text">
+				<h1><?php the_title(); ?></h1>
+			</div>
+		</div>
+		<div class="row columns">
+			<div class="col-12 centered">
+				<h5><?php the_title(); ?></h5>
+			</div>
+		</div>
+	</section>
 
-			<h1><?php the_title(); ?></h1>
-
+	<section>
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 			<!-- article -->

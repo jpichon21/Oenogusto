@@ -31,7 +31,13 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+
+
+
+
+<section id="ProductContainer" class="col-12 centered" data-scroll-section>
+
+	<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
 	<?php
 	/**
@@ -43,6 +49,7 @@ if ( post_password_required() ) {
 	do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
+	<!-- Titre + prix + ajouter au panier -->
 	<div class="summary entry-summary">
 		<?php
 		/**
@@ -60,17 +67,32 @@ if ( post_password_required() ) {
 		do_action( 'woocommerce_single_product_summary' );
 		?>
 	</div>
+	<!-- -->
 
-	<?php
-	/**
-	 * Hook: woocommerce_after_single_product_summary.
-	 *
-	 * @hooked woocommerce_output_product_data_tabs - 10
-	 * @hooked woocommerce_upsell_display - 15
-	 * @hooked woocommerce_output_related_products - 20
-	 */
-	do_action( 'woocommerce_after_single_product_summary' );
-	?>
+	
+	<!-- Description -->
+		<?php
+			/**
+			 * Hook: woocommerce_after_single_product_summary.
+			 *
+			 * @hooked woocommerce_output_product_data_tabs - 10
+			 * @hooked woocommerce_upsell_display - 15
+			 * @hooked woocommerce_output_related_products - 20
+			 */
+			do_action( 'woocommerce_after_single_product_summary' );
+		?>
+	<!-- -->
+
+
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
+
+</section>
+	<script>
+		$('#ateliersNav').addClass('active');
+	</script>
+	<?php get_footer(); ?>
+</div>
+
+

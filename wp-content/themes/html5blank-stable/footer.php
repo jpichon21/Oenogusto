@@ -28,7 +28,7 @@
         <?php woocommerce_login_form() ?>
 
     </div>
-    <script>
+    <!--script>
         (function () {
             console.log("test");
             const scroll = new LocomotiveScroll({
@@ -36,7 +36,7 @@
                 smooth: true
             });
         })();
-    </script>
+    </script-->
 
 
     <script>

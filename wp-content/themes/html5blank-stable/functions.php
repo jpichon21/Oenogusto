@@ -444,6 +444,14 @@ function show_excerpt() {
     
 }
 
+// Remove edit post links
+function wpse_remove_get_edit_post_link( $link ) {
+    return null;
+}
+add_filter('get_edit_post_link', 'wpse_remove_get_edit_post_link');
+
+
+
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
 remove_action('wp_head', 'feed_links', 2); // Display the links to the general feeds: Post and Comment Feed
@@ -464,6 +472,8 @@ remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_l
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
+remove_action( 'woocommerce_before_cart', 'action_woocommerce_before_cart', 10, 1 ); 
+remove_action( 'woocommerce_cart_is_empty', 'action_woocommerce_cart_is_empty', 10, 0 ); 
 
 // Add Filters
 add_filter('avatar_defaults', 'html5blankgravatar'); // Custom Gravatar in Settings > Discussion

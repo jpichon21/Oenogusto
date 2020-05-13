@@ -42,6 +42,15 @@
 		<script>
               new WOW().init();
         </script>
+		<script>
+		//Gestion des modals
+		$( document ).ready(function() {
+			$('.close').on('click', function(event){
+				event.stopPropagation();
+				$('.modal').removeClass('active');
+			});
+		});
+		</script>
 
 
 </head>
