@@ -444,12 +444,12 @@ function show_excerpt() {
     
 }
 
-// Remove edit post links
+/*
 function wpse_remove_get_edit_post_link( $link ) {
     return null;
 }
 add_filter('get_edit_post_link', 'wpse_remove_get_edit_post_link');
-
+*/
 
 
 // Remove Actions

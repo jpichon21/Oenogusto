@@ -27,9 +27,10 @@
                 <div class="col-2"></div>
 
                 <div class="col-5" data-scroll-speed="2">
-                    <h3 class="red">Le concept Oenogusto</h3>
-                    <h2>Dégustez <span class="red">& partez à la découverte du </span> monde du vin <span class="red">et
-                            de ses parfums.</span></h2>
+                    <h3 class="red">Le Concept Oenogusto</h3>
+                    <h5>Oenogusto</h5>
+                    
+                    <h2>Dégustez <span class="red">& partez à la découverte du </span> monde du vin <span class="red">et de ses parfums.</span></h2>
                     <p>
                         À travers des ateliers de dégustations oenologiques ludiques, Oenogusto partage son savoir
                         autour du vin.
@@ -89,75 +90,43 @@
         </section>
 
         <section id="AteliersHome" class="col-9 centered" data-scroll-section>
+            
+        <div class="carousel-items">
 
-            <div class="carousel-items">
+                <?php if(have_rows('ateliers_vedette')) : 
+                    while (have_rows('ateliers_vedette')) : the_row(); ?>
 
-                <div class="carousel-item">
-                    <div class="row columns ">
-                        <div class="col-5">
+                        <?php 
+                            $image = get_sub_field('image');
+                            $titre = get_sub_field('titre');
+                            $session = get_sub_field('session');
+                            $btntext = get_sub_field('btntext');
+                            $btnlink = get_sub_field('btnlink');
+                            $description =  get_sub_field('description'); 
+                        ?>
 
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/ateliers_18.jpg">
+                        <div class="carousel-item">
+                            <div class="row columns ">
+                                <div class="col-5">
+                                    <img src="<?php echo $image['url']; ?>" >
+                                </div>
+
+                                <div class="col-2"></div>
+
+                                <div class="col-5">
+                                    <h3 class="red">Prochaine Session : <span class="date"><?php echo $session ?></span></h3>
+                                    <h2><?php echo $titre ?></span></h2>
+                                    <p>
+                                        <?php echo $description ?>
+                                    </p>
+                                    <a href="<?php echo $btnlink ?>" class="button"><?php echo $btntext ?></a>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="col-2"></div>
-
-                        <div class="col-5">
-                            <h3 class="red">Prochain Session : <span class="date">11.05.2020</span></h3>
-                            <h2>Atelier 1 : <span class="red">Initiation à la Dégustation.</span></h2>
-                            <p>
-                                Déguster n’est pas boire mais c’est ressentir, observer, analyser, s’exprimer et
-                                partager ses émotions avec ses souvenirs. On ne reconnaît que ce que l’on connaît.
-                                Ayez confiance en vos sens et efforcez vous d’exprimer ce que vous ressentez du vin.
-                            </p>
-                            <a href="#" class="button"> Réserver cet atelier </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="row columns ">
-                        <div class="col-5">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/ateliers_11.jpg">
-
-                        </div>
-
-                        <div class="col-2"></div>
-
-                        <div class="col-5">
-                            <h3 class="red">Prochain Session : <span class="date">11.05.2020</span></h3>
-                            <h2>Atelier 2 : <span class="red">Initiation à la Dégustation.</span></h2>
-                            <p>
-                                Déguster n’est pas boire mais c’est ressentir, observer, analyser, s’exprimer et
-                                partager ses émotions avec ses souvenirs. On ne reconnaît que ce que l’on connaît.
-                                Ayez confiance en vos sens et efforcez vous d’exprimer ce que vous ressentez du vin.
-                            </p>
-                            <a href="#" class="button"> Réserver cet atelier </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="row columns ">
-                        <div class="col-5">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/content/ateliers_18.jpg">
-
-                        </div>
-
-                        <div class="col-2"></div>
-
-                        <div class="col-5">
-                            <h3 class="red">Prochain Session : <span class="date">11.05.2020</span></h3>
-                            <h2>Atelier 3 : <span class="red">Initiation à la Dégustation.</span></h2>
-                            <p>
-                                Déguster n’est pas boire mais c’est ressentir, observer, analyser, s’exprimer et
-                                partager ses émotions avec ses souvenirs. On ne reconnaît que ce que l’on connaît.
-                                Ayez confiance en vos sens et efforcez vous d’exprimer ce que vous ressentez du vin.
-                            </p>
-                            <a href="#" class="button"> Réserver cet atelier </a>
-                        </div>
-                    </div>
-                </div>
-
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
         </section>
 
 

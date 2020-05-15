@@ -25,22 +25,23 @@ if ( ! $notices ) {
 
 ?>
 
-<div class="modal active">
-	<a href="#close" class="modal-overlay close" aria-label="Close"></a>
-		<div class="modal-container">
-		<div class="modal-header">
-		<a href="#close" class="btn btn-clear float-right close" aria-label="Close"></a>
-		</div>
-			<div class="modal-body">
 				<ul class="woocommerce-error" role="alert">
 					<?php foreach ( $notices as $notice ) : ?>
-						<li<?php echo wc_get_notice_data_attr( $notice ); ?>>
-							<?php echo wc_kses_notice( $notice['notice'] ); ?>
-						</li>
-					<?php endforeach; ?>
+						<div class="modal active">
+							<a href="#close" class="modal-overlay close" aria-label="Close"></a>
+								<div class="modal-container">
+								<div class="modal-header">
+								<a href="#close" class="btn btn-clear float-right close" aria-label="Close"></a>
+								</div>
+									<div class="modal-body">
+												<li<?php echo wc_get_notice_data_attr( $notice ); ?>>
+													<?php echo wc_kses_notice( $notice['notice'] ); ?>
+												</li>
+												</div>
+								</div>
+						</div>
+			
 				</ul>
-			</div>
-		</div>
-</div>
 
 
+				<?php endforeach; ?>

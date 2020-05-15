@@ -113,8 +113,9 @@ font-style: italic;
 /***********************/
 /***********************/
 /** BASE **/
-*:focus {
-  outline: none; }
+*:focus, a:focus, a, * {
+  outline: none !important;
+  box-shadow: none !important; }
 
 html {
   /*scroll-behavior: smooth;*/
@@ -126,7 +127,13 @@ html {
       font-size: 55.5% !important; } }
   @media (min-width: 1780px) {
     html {
-      font-size: 76.5% !important; } }
+      font-size: 70.5% !important; } }
+
+html {
+  -ms-overflow-style: none;
+  /* IE 11 */
+  scrollbar-width: none;
+  /* Firefox 64 */ }
 
 html::-webkit-scrollbar {
   display: none; }
@@ -141,9 +148,6 @@ html {
 body, a, p, span, li {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto; }
-
-.has-scroll-smooth body {
-  max-height: calc(100vh - 2.5rem); }
 
 .hidden {
   display: none !important; }
@@ -173,6 +177,11 @@ a:hover, a:active, a:focus {
   color: #930e0f !important; }
 
 h1, h2 {
+  font-family: 'Montserrat Regular';
+  font-size: 4.8rem !important;
+  line-height: 4.8rem !important; }
+
+#TitleContainer h1 {
   font-family: 'Montserrat Regular';
   font-size: 3.8rem !important;
   line-height: 3.8rem !important; }
@@ -229,7 +238,7 @@ blockquote {
     bottom: -4rem; }
 
 .button, #SeeButton, .checkout-button, input[type="submit"] {
-  font-family: "Montserrat Light" !important;
+  font-family: "Montserrat Regular" !important;
   font-size: 1.4rem !important;
   line-height: 2.4rem !important;
   text-transform: uppercase !important;
@@ -241,6 +250,7 @@ blockquote {
   transition: 0.5s ease !important;
   display: inline-block !important;
   border-radius: 0px !important;
+  font-weight: 400 !important;
   /* &:hover, &:active, &:focus{
         background-color: $color-red;
         color: white!important;
@@ -264,7 +274,7 @@ blockquote {
       width: 100%; }
 
 input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
-  background: #930e0f; }
+  background: #930e0f !important; }
 
 aside {
   display: none !important; }
@@ -288,17 +298,53 @@ form input, form textarea, form select {
 form input[type="submit"] {
   width: auto; }
 
+.checkout {
+  margin-top: 3rem; }
+  .checkout h3 {
+    margin-bottom: 2rem; }
+  .checkout h5 {
+    display: none; }
+
+.contact-form-section {
+  margin-top: 3rem !important; }
+
+.woocommerce-billing-fields__field-wrapper, .woocommerce-additional-fields__field-wrapper {
+  background-color: white;
+  padding: 2rem;
+  margin-bottom: 2rem; }
+  .woocommerce-billing-fields__field-wrapper input, .woocommerce-billing-fields__field-wrapper select, .woocommerce-additional-fields__field-wrapper input, .woocommerce-additional-fields__field-wrapper select {
+    border: 1px solid #cecece5c; }
+
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+  padding: 2rem; }
+
+#add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods {
+  border-color: #0000000a; }
+
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+  background-color: white; }
+
+#add_payment_method #payment ul.payment_methods li, .woocommerce-cart #payment ul.payment_methods li, .woocommerce-checkout #payment ul.payment_methods li {
+  font-size: 1.6rem;
+  margin-bottom: 1rem !important; }
+
+.woocommerce-privacy-policy-text {
+  padding: 4rem; }
+  .woocommerce-privacy-policy-text a {
+    color: #930e0f !important; }
+
 /** LAYOUT **/
-.woocommerce-products-header {
+.woocommerce-products-header, .woocommerce-form-login {
   display: none !important; }
 
-body {
-  padding: 2.5rem; }
-  body .wrapper {
-    background-color: #f7f6f3 !important;
-    overflow: hidden; }
-  body .pageContainer {
-    min-height: 100vh; }
+body .wrapper {
+  background-color: #f7f6f3 !important;
+  overflow: hidden; }
+
+body .pageContainer {
+  min-height: 100vh; }
+  body .pageContainer .post-edit-link {
+    display: none !important; }
 
 footer {
   padding: 6rem 0rem 12rem 0rem; }
@@ -334,13 +380,13 @@ header {
     position: relative; }
     header nav #menuLogo {
       display: inline-block;
-      margin-top: -2rem !important; }
+      margin-top: 0.5rem !important; }
       header nav #menuLogo img {
         width: 14.0rem; }
     header nav ul {
       position: absolute;
       right: 0;
-      top: 2rem; }
+      top: 3.6rem; }
       header nav ul li {
         display: inline-block;
         text-align: left;
@@ -409,7 +455,7 @@ section .button {
   margin: 9.6rem 0rem; }
 
 #TitleContainer {
-  padding: 14.6rem 0rem 0.6rem 0rem;
+  padding: 18.6rem 0rem 0.6rem 0rem;
   position: relative; }
   #TitleContainer p {
     position: relative; }
@@ -434,21 +480,26 @@ section .button {
     position: absolute;
     left: 2rem;
     font-size: 31rem !important;
-    display: none; }
+    max-width: 5ch; }
 
 #HeroContainer, #QuoteContainer {
-  padding: 18.6rem 0rem !important; }
+  padding: 20.6rem 0rem !important; }
+  #HeroContainer h5, #QuoteContainer h5 {
+    opacity: 0.025;
+    position: absolute;
+    left: -18rem;
+    font-size: 35rem !important; }
 
 #EntrepriseIntro {
-  padding: 0rem 0rem 18.6rem 0rem !important; }
+  padding: 3rem 0rem 20.6rem 0rem !important; }
   #EntrepriseIntro .intro-right {
     padding-top: 24.6rem; }
   #EntrepriseIntro .columns p {
     font-family: freight-big-pro, serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 2.6rem !important;
-    line-height: 3rem !important; }
+    font-size: 2.2rem !important;
+    line-height: 2.8rem !important; }
     #EntrepriseIntro .columns p.left {
       padding: 0rem 9rem 0rem 0rem; }
     #EntrepriseIntro .columns p.right {
@@ -456,23 +507,27 @@ section .button {
   #EntrepriseIntro .separator {
     margin: 14.6rem 0rem; }
 
-#HeroContainer #HeroCardsContainer .card-container {
-  display: inline-block;
-  position: relative;
-  width: 16rem; }
-  #HeroContainer #HeroCardsContainer .card-container.offset {
-    margin: 0rem 3%;
-    height: 36rem; }
-    #HeroContainer #HeroCardsContainer .card-container.offset img {
-      position: absolute;
-      top: 0px; }
-
-#HeroContainer #HeroCardsContainer img {
-  width: 100%;
-  margin-top: 6rem; }
+#HeroContainer #HeroCardsContainer {
+  margin-top: -4rem; }
+  #HeroContainer #HeroCardsContainer .card-container {
+    display: inline-block;
+    position: relative;
+    width: 9.2vw; }
+    #HeroContainer #HeroCardsContainer .card-container.offset {
+      margin: 0rem 3%;
+      height: 35rem; }
+      #HeroContainer #HeroCardsContainer .card-container.offset img {
+        position: absolute;
+        top: 0px; }
+  #HeroContainer #HeroCardsContainer img {
+    width: 100%;
+    margin-top: 6rem; }
 
 #QuoteContainer #QuoteTextContainer {
   padding-top: 18rem; }
+
+#AteliersCTA {
+  margin-bottom: 18rem !important; }
 
 .CTA {
   margin-top: 6rem !important;
@@ -528,12 +583,12 @@ section .button {
 
 #EntrepriseDemande h3:before {
   content: "";
-  width: 12rem;
+  width: 20rem;
   border-bottom: 1px solid #930e0f;
   height: 4px;
   display: block;
   position: absolute;
-  left: -12vw;
+  left: -16vw;
   top: 1.6rem; }
 
 #EntrepriseDemande video {
@@ -541,12 +596,12 @@ section .button {
 
 #EntrepriseCarte h3:before {
   content: "";
-  width: 12rem;
+  width: 20rem;
   border-bottom: 1px solid #930e0f;
   height: 4px;
   display: block;
   position: absolute;
-  right: -12vw;
+  right: -16vw;
   top: 1.6rem; }
 
 #EntrepriseCarte video {
@@ -584,7 +639,7 @@ section .button {
     flex-direction: row; }
 
 #AteliersContainer .atelier-card {
-  padding: 10rem 0rem 10rem 0rem; }
+  padding: 6rem 0rem 36vh 0rem; }
 
 #AteliersContainer .counter-container {
   flex-direction: row-reverse; }
@@ -612,15 +667,23 @@ section .button {
     font-size: 6.0rem;
     opacity: 0.1; }
 
+#ProductContainer {
+  min-height: 80vh; }
+
 #CartContainer .shop_table, #CheckoutContainer .shop_table {
   border-radius: 0px;
-  background-color: white; }
+  background-color: white;
+  border: none !important;
+  padding: 2rem; }
 
 #CartContainer table th, #CartContainer td a, #CartContainer td span, #CheckoutContainer table th, #CheckoutContainer td a, #CheckoutContainer td span {
   font-family: 'Montserrat Light', sans-serif;
   padding: 9px 12px;
   line-height: 1.5em;
   font-size: 1.6rem; }
+
+#CartContainer td, #CartContainer tr, #CartContainer th, #CheckoutContainer td, #CheckoutContainer tr, #CheckoutContainer th {
+  border-color: #0000000a; }
 
 #CartContainer td a, #CheckoutContainer td a {
   color: #930e0f !important; }
@@ -658,6 +721,12 @@ section .button {
 
 .woocommerce-notices-wrapper, .woocommerce-message {
   font-size: 1.6rem !important; }
+
+.modal.active .modal-overlay, .modal:target .modal-overlay {
+  background-color: #f7f8f94d !important; }
+
+.modal-body {
+  padding-bottom: 4rem !important; }
 
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
   padding: 1em 2em 1em 3.5em;

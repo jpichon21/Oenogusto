@@ -8,7 +8,7 @@ $color-grey: #8a8988;
 $color-red: #930e0f;
 $color-black: #0e0e0e;
 
-$global-spacing: 18.6rem;
+$global-spacing: 20.6rem;
 
 
 /*********FONTS*******/
@@ -154,9 +154,11 @@ font-style: italic;
 
 
 /** BASE **/
-*:focus {
-    outline: none;
+*:focus, a:focus, a, *{
+    outline: none!important;
+    box-shadow: none!important;
 }
+
 
 html {
     /*scroll-behavior: smooth;*/
@@ -167,8 +169,14 @@ html {
         font-size: 55.5%!important;
     }
    @include media('>=hirez') {
-        font-size: 76.5%!important;
+        font-size: 70.5%!important;
     }
+}
+
+html
+{
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
 }
 
 html::-webkit-scrollbar {
@@ -190,7 +198,7 @@ body, a,p, span, li {
 }
 
 .has-scroll-smooth body {
-    max-height: calc(100vh - 2.5rem);
+    //max-height: calc(100vh - 2.5rem);
 }
 
 .hidden{
@@ -230,10 +238,16 @@ a:hover, a:active, a:focus{
 
 h1, h2{
     font-family: 'Montserrat Regular';
-    //font-size: 4.8rem !important;
-    //line-height: 4.8rem !important;
+    font-size: 4.8rem !important;
+    line-height: 4.8rem !important;
+}
+
+#TitleContainer{
+    h1{
+    font-family: 'Montserrat Regular';
     font-size: 3.8rem !important;
     line-height: 3.8rem !important;
+    }
 }
 
 h3{
@@ -297,7 +311,7 @@ blockquote{
 }
 
 .button, #SeeButton, .checkout-button, input[type="submit"]{
-    font-family: 'Montserrat Light'!important;
+    font-family: 'Montserrat Regular'!important;
     font-size: 1.4rem!important;
     line-height: 2.4rem!important;
     text-transform: uppercase!important;
@@ -309,6 +323,7 @@ blockquote{
     transition: 0.5s ease!important;
     display: inline-block!important;
     border-radius: 0px!important;
+    font-weight: 400!important;
    /* &:hover, &:active, &:focus{
         background-color: $color-red;
         color: white!important;
@@ -337,7 +352,7 @@ blockquote{
 
 input[type="submit"]{
     &:hover, &:active, &:focus{
-        background: $color-red;
+        background: $color-red!important;
     }
 }
 
@@ -368,23 +383,72 @@ form{
     input[type="submit"]{
         width: auto;
     }
+}
 
+.checkout{
+    margin-top: 3rem;
+    h3{
+        margin-bottom: 2rem;
+    }
+    h5{
+        display: none;
+    }
+}
+
+.contact-form-section{
+    margin-top: 3rem!important;
+}
+
+.woocommerce-billing-fields__field-wrapper, .woocommerce-additional-fields__field-wrapper{
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    input, select{
+        border: 1px solid #cecece5c;
+    }
+}
+
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+    padding: 2rem;
+}
+
+#add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods{
+    border-color: #0000000a;
+}
+
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment{
+    background-color: white;
+}
+
+#add_payment_method #payment ul.payment_methods li, .woocommerce-cart #payment ul.payment_methods li, .woocommerce-checkout #payment ul.payment_methods li{
+    font-size: 1.6rem;
+    margin-bottom: 1rem!important;
+}
+
+.woocommerce-privacy-policy-text{
+    padding: 4rem;
+    a{
+        color:$color-red!important;
+    }
 }
 
 /** LAYOUT **/
-.woocommerce-products-header{ 
+.woocommerce-products-header,  .woocommerce-form-login{ 
     display : none!important;
 }
 
 
 body{
-    padding: 2.5rem;
+    //padding: 2.5rem;
     .wrapper{
         background-color: $color-beige!important;
         overflow: hidden;
     }
     .pageContainer{
         min-height: 100vh;
+        .post-edit-link{
+            display: none!important;
+        }
     }
 }
 
@@ -433,7 +497,7 @@ header{
         position: relative;
         #menuLogo{
             display: inline-block;
-            margin-top: -2rem!important;
+            margin-top: 0.5rem!important;
    
             img{
                 width: 14.0rem;
@@ -442,7 +506,7 @@ header{
         ul{
             position: absolute;
             right: 0;
-            top: 2rem;
+            top: 3.6rem;
             li{
             display: inline-block;
             text-align: left;
@@ -531,7 +595,7 @@ section{
 }
 
 #TitleContainer{
-    padding: 14.6rem 0rem 0.6rem 0rem;
+    padding: 18.6rem 0rem 0.6rem 0rem;
     position: relative;
     p{
         position: relative;
@@ -560,17 +624,23 @@ section{
         position: absolute;
         left: 2rem;
         font-size: 31rem!important;
-        display: none;
+        max-width: 5ch;
     }
 
 }
 
 #HeroContainer, #QuoteContainer{
     padding: $global-spacing 0rem!important;
+    h5{
+        opacity: 0.025;
+        position: absolute;
+        left: -18rem;
+        font-size: 35rem!important;
+    }
 }
 
 #EntrepriseIntro{
-    padding: 0rem 0rem $global-spacing 0rem!important;
+    padding: 3rem 0rem $global-spacing 0rem!important;
     .intro-right{
         padding-top: 24.6rem;
     }
@@ -578,8 +648,8 @@ section{
         font-family: freight-big-pro, serif;
         font-weight: 300;
         font-style: normal;
-        font-size: 2.6rem !important;
-        line-height: 3.0rem!important;
+        font-size: 2.2rem !important;
+        line-height: 2.8rem!important;
         &.left{
             padding: 0rem 9rem 0rem 0rem;
         }
@@ -594,13 +664,15 @@ section{
 
 #HeroContainer{
     #HeroCardsContainer{
+        margin-top: -4rem;
         .card-container{
             display: inline-block;
             position: relative;
-            width: 16rem;
+            //width: 16rem;
+            width: 9.2vw;
             &.offset{
                 margin: 0rem 3%;
-                height: 36rem;
+                height: 35rem;
                 img{
                     position: absolute;
                     top: 0px;
@@ -620,6 +692,9 @@ section{
     #QuoteTextContainer{
         padding-top: 18rem;
     }
+}
+#AteliersCTA{
+    margin-bottom: 18rem!important;
 }
 
 .CTA{
@@ -693,12 +768,12 @@ section{
     h3{
         &:before{
             content: "";
-            width: 12rem;
+            width: 20rem;
             border-bottom: 1px solid #930e0f;
             height: 4px;
             display: block;
             position: absolute;
-            left: -12vw;
+            left: -16vw;
             top: 1.6rem;
         }
     }
@@ -711,12 +786,12 @@ section{
     h3{
         &:before{
             content: "";
-            width: 12rem;
+            width: 20rem;
             border-bottom: 1px solid #930e0f;
             height: 4px;
             display: block;
             position: absolute;
-            right: -12vw;
+            right: -16vw;
             top: 1.6rem;
         }
     }
@@ -767,7 +842,7 @@ section{
         }
     }
     .atelier-card{
-        padding: 10rem 0rem 10rem 0rem;
+        padding: 6rem 0rem 36vh 0rem;
     }
     .counter-container{
         flex-direction: row-reverse;
@@ -800,6 +875,7 @@ section{
 }
 
 #ProductContainer{
+    min-height: 80vh;
     div{
         //display: none;
     }
@@ -809,12 +885,17 @@ section{
     .shop_table{
         border-radius: 0px;
         background-color: white;
+        border: none!important;
+        padding: 2rem;
     }
     table th, td a, td span {
         font-family: 'Montserrat Light', sans-serif;
         padding: 9px 12px;
         line-height: 1.5em;
         font-size: 1.6rem;
+    }
+    td, tr, th{
+        border-color : #0000000a;
     }
     td a{
         color: $color-red!important;
@@ -861,6 +942,13 @@ section{
 .woocommerce-notices-wrapper, .woocommerce-message{
     font-size: 1.6rem!important;
 }
+.modal.active .modal-overlay, .modal:target .modal-overlay{
+    background-color: #f7f8f94d!important;
+}
+.modal-body{
+    padding-bottom: 4rem!important;
+}
+
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
     padding: 1em 2em 1em 3.5em;
     margin: 0 0 2em;

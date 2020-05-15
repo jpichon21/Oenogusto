@@ -20,7 +20,7 @@
             </div>
         </section>
 
-        <section class="col-9 centered" data-scroll-section>
+        <section class="col-6 centered contact-form-section" data-scroll-section>
 
             <?php echo get_field('contact_form'); ?>
             
