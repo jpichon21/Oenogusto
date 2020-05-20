@@ -25,7 +25,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <div class="row columns row-increment">
-	<div class="col-10 centered atelier-card" data-scroll>
+	<div class="col-10 centered atelier-card" >
 		<div class="row columns counter-container">
 
 			<div class="col-5" >

@@ -136,6 +136,16 @@
         <!-- -->
 
 <script>
+        ScrollReveal().reveal('.intro-left', { delay: 300 });
+        ScrollReveal().reveal('.intro-right', { delay: 800 });
+        ScrollReveal().reveal('blockquote', { delay: 1200 });
+        ScrollReveal().reveal('#EntrepriseDemande', { delay: 300 });
+        ScrollReveal().reveal('#EntrepriseCarte', { delay: 300 });
+        ScrollReveal().reveal('#ContactCTA', { delay: 300 });
+        ScrollReveal().reveal('#ContactHome', { delay: 800 });
+        ScrollReveal().reveal('footer', { delay: 1000 });
+</script>
+<script>
     $('#entrepriseNav').addClass('active');
 </script>
 <?php get_footer(); ?>

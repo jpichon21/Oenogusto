@@ -367,6 +367,8 @@ function enqueue_styles() {
     wp_enqueue_style('locomotive'); // Enqueue it!
     wp_register_style('animate', get_template_directory_uri() . '/css/animate.css', array(), '1.0', 'all');
     wp_enqueue_style('animate'); // Enqueue it!
+    wp_register_style('simplebar', get_template_directory_uri() . '/css/simplebar.css', array(), '1.0', 'all');
+    wp_enqueue_style('simplebar'); // Enqueue it!
 }
 
 function enqueue_script() {
@@ -374,8 +376,23 @@ function enqueue_script() {
     wp_enqueue_script('jquery'); // Enqueue it!
     wp_register_script('slick', '/js/slick.min.js', array(), '1.0');
     wp_enqueue_script('slick'); // Enqueue it!
-    wp_register_script('wow', '/js/wow.js', array(), '1.0');
-    wp_enqueue_script('wow'); // Enqueue it!
+    wp_register_script('scroll', '/js/scrollreveal.min.js', array(), '1.0');
+    wp_enqueue_script('scroll'); // Enqueue it!
+    wp_register_script('scroll', '/js/simplebar.js', array(), '1.0');
+    wp_enqueue_script('simplebar'); // Enqueue it!
+    wp_register_script('kursor', '/js/kursor.js', array(), '1.0');
+    wp_enqueue_script('kursor'); // Enqueue it!
+
+    wp_register_script('navigation.js', '/js/navigation.js', array(), '1.0');
+    wp_enqueue_script('navigation'); // Enqueue it!
+    wp_register_script('skip-link-focus-fix.js', '/js/skip-link-focus-fix.js', array(), '1.0');
+    wp_enqueue_script('skip-link-focus-fix'); // Enqueue it!
+    wp_register_script('customizer.js', '/js/customizer.js', array(), '1.0');
+    wp_enqueue_script('customizer'); // Enqueue it!
+    wp_register_script('woocommerce', '/js/woocommerce.js', array(), '1.0');
+    wp_enqueue_script('woocommerce'); // Enqueue it!
+    wp_register_script('utils', '/js/utils.js', array(), '1.0');
+    wp_enqueue_script('utils'); // Enqueue it!
 }
 
 // Modifier les images de la page ateliers

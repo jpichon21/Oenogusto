@@ -22,6 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </ul>
 </section>
+
+	<script>
+            ScrollReveal().reveal('.atelier-card', { delay: 600 });
+			ScrollReveal().reveal('footer', { delay: 800 });
+	</script>
+
 	<script>
 		$('#ateliersNav').addClass('active');
 	</script>
