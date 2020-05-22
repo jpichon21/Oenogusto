@@ -743,6 +743,8 @@ section .button {
   #ProductCardContainer .ariane, #ProductCardContainer .ariane a {
     color: #930e0f !important;
     margin-bottom: 1.6rem; }
+  #ProductCardContainer .duration-wrapper {
+    text-align: right; }
   #ProductCardContainer .show-more-ateliers {
     padding: 8rem 0rem;
     font-family: 'Montserrat Regular', sans-serif; }
@@ -770,6 +772,8 @@ section .button {
   #ProductCardContainer .yith-wcbk-form-section-duration input, #ProductCardContainer .yith-wcbk-form-section-duration label {
     display: inline-block !important;
     margin-bottom: 3rem; }
+  #ProductCardContainer .yith-wcbk-form-section {
+    width: 100%; }
   #ProductCardContainer label {
     font-size: 1.4rem;
     font-family: 'Montserrat Light', sans-serif; }

@@ -968,6 +968,9 @@ section{
         color: $color-red!important;
         margin-bottom: 1.6rem;
     }
+    .duration-wrapper{
+        text-align: right;
+    }
     .show-more-ateliers{
         padding: 8rem 0rem;
         font-family: 'Montserrat Regular', sans-serif;
@@ -1004,6 +1007,9 @@ section{
             display: inline-block!important;
             margin-bottom: 3rem;
         }
+    }
+    .yith-wcbk-form-section {
+        width: 100%;
     }
     label{
         font-size: 1.4rem;

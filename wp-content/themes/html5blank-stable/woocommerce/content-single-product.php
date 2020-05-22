@@ -191,6 +191,7 @@ if ( post_password_required() ) {
 		$('#ateliersNav').addClass('active');
 	</script>
 	<?php get_footer(); ?>
+
 </div>
 
 
