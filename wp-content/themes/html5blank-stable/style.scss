@@ -942,7 +942,14 @@ section{
 
 #ProductContainer{
     min-height: 80vh;
-    padding: 16rem 0rem;
+    h1{
+        font-size: 4.8rem!important;
+        line-height: 4.8rem!important;
+        max-width: 60rem;
+        font-family: 'Montserrat Light', sans-serif;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+    }
     div{
         //display: none;
     }
@@ -953,10 +960,64 @@ section{
         width: 100%;
         text-align: center;
     }
-
 }
 
 #ProductCardContainer{
+    position: relative;
+    .ariane, .ariane a{
+        color: $color-red!important;
+        margin-bottom: 1.6rem;
+    }
+    .show-more-ateliers{
+        padding: 8rem 0rem;
+        font-family: 'Montserrat Regular', sans-serif;
+        span, i ,a{
+
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            color: $color-red!important;
+        }
+        .next{
+            float: right;
+        }
+    }
+    &:before{
+        content: "";
+        width: 12rem;
+        border-bottom: 1px solid #930e0f;
+        height: 4px;
+        display: block;
+        position: absolute;
+        left: -24rem;
+        top: 1rem;
+    }
+    .woocommerce-product-gallery {
+        margin-bottom: 4rem;
+    }
+    .woocommerce-Price-amount{
+        font-size: 4.2rem;
+        color: $color-red!important;
+        float: left;
+    }
+    .yith-wcbk-form-section-duration{
+        input, label{
+            display: inline-block!important;
+            margin-bottom: 3rem;
+        }
+    }
+    label{
+        font-size: 1.4rem;
+        font-family: 'Montserrat Light', sans-serif;
+    }
+    path{
+        color:#c1c1c1;
+    }
+    select::-ms-expand {
+        display: none!important;
+    }
+    .yith-wcbk-form-section{
+        font-size: 1.4rem;
+    }
     .tabs.wc-tabs, h2{
         display: none!important;
     }
@@ -966,7 +1027,42 @@ section{
     .woocommerce-product-gallery{
         width: 100%;
     }
-
+    .yith-wcbk-add-to-cart-button.single_add_to_cart_button{
+        width: 100%;
+        padding: 0.8rem 2rem!important;
+    }
+    .yith-wcbk-booking-form{
+        input, select{
+            margin: 0px;
+        }
+    }
+    #ui-datepicker-div{
+        width: 100%!important;
+    }
+    td.ui-datepicker-current-day, td:not(.ui-state-disabled):hover{
+        background: $color-red!important;
+        color: white!important;
+    }
+    td{
+        a:hover, a:active, a:focus{
+            color: white!important;
+        }
+    }
+    .ui-datepicker-close{
+        color: $color-red!important;
+    }
+    .entreprise-cta-container{
+        text-align: center;
+    }
+    .entreprise-cta{
+        display: inline-block;
+        color: $color-red;
+        font-size: 1.2rem;
+        font-family: 'Montserrat Regular', sans-serif;
+        text-transform: uppercase;
+        margin-top: 2rem;
+    }
+    
 }
 
 //  Modals

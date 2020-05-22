@@ -724,22 +724,90 @@ section .button {
   text-align: right; }
 
 #ProductContainer {
-  min-height: 80vh;
-  padding: 16rem 0rem; }
+  min-height: 80vh; }
+  #ProductContainer h1 {
+    font-size: 4.8rem !important;
+    line-height: 4.8rem !important;
+    max-width: 60rem;
+    font-family: 'Montserrat Light', sans-serif;
+    margin: 0 auto;
+    margin-bottom: 4rem; }
   #ProductContainer .woocommerce-product-details__short-description, #ProductContainer .product_meta {
     display: none !important; }
   #ProductContainer .summary.entry-summary {
     width: 100%;
     text-align: center; }
 
-#ProductCardContainer .tabs.wc-tabs, #ProductCardContainer h2 {
-  display: none !important; }
-
-#ProductCardContainer .panel {
-  border: none !important; }
-
-#ProductCardContainer .woocommerce-product-gallery {
-  width: 100%; }
+#ProductCardContainer {
+  position: relative; }
+  #ProductCardContainer .ariane, #ProductCardContainer .ariane a {
+    color: #930e0f !important;
+    margin-bottom: 1.6rem; }
+  #ProductCardContainer .show-more-ateliers {
+    padding: 8rem 0rem;
+    font-family: 'Montserrat Regular', sans-serif; }
+    #ProductCardContainer .show-more-ateliers span, #ProductCardContainer .show-more-ateliers i, #ProductCardContainer .show-more-ateliers a {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: #930e0f !important; }
+    #ProductCardContainer .show-more-ateliers .next {
+      float: right; }
+  #ProductCardContainer:before {
+    content: "";
+    width: 12rem;
+    border-bottom: 1px solid #930e0f;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: -24rem;
+    top: 1rem; }
+  #ProductCardContainer .woocommerce-product-gallery {
+    margin-bottom: 4rem; }
+  #ProductCardContainer .woocommerce-Price-amount {
+    font-size: 4.2rem;
+    color: #930e0f !important;
+    float: left; }
+  #ProductCardContainer .yith-wcbk-form-section-duration input, #ProductCardContainer .yith-wcbk-form-section-duration label {
+    display: inline-block !important;
+    margin-bottom: 3rem; }
+  #ProductCardContainer label {
+    font-size: 1.4rem;
+    font-family: 'Montserrat Light', sans-serif; }
+  #ProductCardContainer path {
+    color: #c1c1c1; }
+  #ProductCardContainer select::-ms-expand {
+    display: none !important; }
+  #ProductCardContainer .yith-wcbk-form-section {
+    font-size: 1.4rem; }
+  #ProductCardContainer .tabs.wc-tabs, #ProductCardContainer h2 {
+    display: none !important; }
+  #ProductCardContainer .panel {
+    border: none !important; }
+  #ProductCardContainer .woocommerce-product-gallery {
+    width: 100%; }
+  #ProductCardContainer .yith-wcbk-add-to-cart-button.single_add_to_cart_button {
+    width: 100%;
+    padding: 0.8rem 2rem !important; }
+  #ProductCardContainer .yith-wcbk-booking-form input, #ProductCardContainer .yith-wcbk-booking-form select {
+    margin: 0px; }
+  #ProductCardContainer #ui-datepicker-div {
+    width: 100% !important; }
+  #ProductCardContainer td.ui-datepicker-current-day, #ProductCardContainer td:not(.ui-state-disabled):hover {
+    background: #930e0f !important;
+    color: white !important; }
+  #ProductCardContainer td a:hover, #ProductCardContainer td a:active, #ProductCardContainer td a:focus {
+    color: white !important; }
+  #ProductCardContainer .ui-datepicker-close {
+    color: #930e0f !important; }
+  #ProductCardContainer .entreprise-cta-container {
+    text-align: center; }
+  #ProductCardContainer .entreprise-cta {
+    display: inline-block;
+    color: #930e0f;
+    font-size: 1.2rem;
+    font-family: 'Montserrat Regular', sans-serif;
+    text-transform: uppercase;
+    margin-top: 2rem; }
 
 .woocommerce-notices-wrapper > .modal.active:first-of-type {
   display: none !important; }

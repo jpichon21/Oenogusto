@@ -35,42 +35,51 @@ if ( post_password_required() ) {
 
 
 
-<section id="ProductContainer" class="col-9 centered" data-scroll-section>
+<section id="ProductContainer" class="col-12 centered" data-scroll-section>
 
 	<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
 
+<div id="TitleContainer">
+	<div class="row columns">
+		<div class="col-12">
+		<!-- Titre + prix + ajouter au panier -->
+			<div class="summary entry-summary">
+				<?php
+				/**
+				 * Hook: woocommerce_single_product_summary.
+				 *
+				 * @hooked woocommerce_template_single_title - 5
+				 * @hooked woocommerce_template_single_rating - 10
+				 * @hooked woocommerce_template_single_price - 10
+				 * @hooked woocommerce_template_single_excerpt - 20
+				 * @hooked woocommerce_template_single_add_to_cart - 30
+				 * @hooked woocommerce_template_single_meta - 40
+				 * @hooked woocommerce_template_single_sharing - 50
+				 * @hooked WC_Structured_Data::generate_product_data() - 60
+				 */
+				do_action( 'woocommerce_single_product_summary' );
+				?>
+			</div>
+		</div>
+		<!-- -->
+	</div>
 
-<div class="row columns">
-	<div class="col-12">
-	<!-- Titre + prix + ajouter au panier -->
-		<div class="summary entry-summary">
-			<?php
-			/**
-			 * Hook: woocommerce_single_product_summary.
-			 *
-			 * @hooked woocommerce_template_single_title - 5
-			 * @hooked woocommerce_template_single_rating - 10
-			 * @hooked woocommerce_template_single_price - 10
-			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 30
-			 * @hooked woocommerce_template_single_meta - 40
-			 * @hooked woocommerce_template_single_sharing - 50
-			 * @hooked WC_Structured_Data::generate_product_data() - 60
-			 */
-			do_action( 'woocommerce_single_product_summary' );
-			?>
+	<div class="row columns">
+		<div class="col-12">
+			<h5>Ateliers</h5>
 		</div>
 	</div>
-	<!-- -->
 </div>
 
-<div id="ProductCardContainer">
 
-	
+
+<div id="ProductCardContainer" class="col-9 centered">
+
 	<div class="row columns">
 	<!-- Partie carrousel + prix -->
 		<div class="col-5">
+			<p class="ariane"><a href="./ateliers">Ateliers Oenologiques</a> > <a href="<?php echo get_permalink( $product->ID ); ?>"><?php echo $product->get_title(); ?></a></p>
 					<?php
 					/**
 					 * Hook: woocommerce_before_single_product_summary.
@@ -138,6 +147,7 @@ if ( post_password_required() ) {
 					<?php do_action( 'yith_wcbk_booking_after_add_to_cart_button' ); ?>
 
 					<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+					<?php echo '<p class="entreprise-cta-container"><a href="./contact" class="entreprise-cta">Vous êtes une entreprise ? Contactez-nous <i class="far fa-envelope"></i></a></p>' ?>
 				</form>
 			</div>
 		</div>
@@ -163,7 +173,13 @@ if ( post_password_required() ) {
 		<!-- -->
 	</div>
 
-	
+	<div class="row columns">
+
+	<div class="col-12 centered show-more-ateliers">
+		<span class="prev"><i class="fas fa-arrow-left"></i> <?php previous_post_link( ' %link', 'Atelier Précédent', true, '', 'product_cat' ); ?>	</span>
+		<span class="next"><?php next_post_link( ' %link', 'Atelier Suivant', true, '', 'product_cat' ); ?> <i class="fas fa-arrow-right"></i></span>
+	</div>
+
 </div>
 
 </div>
