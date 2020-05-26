@@ -984,6 +984,21 @@ section{
             float: right;
         }
     }
+    .slick-slide{
+        img{
+            margin-top: 0rem;
+        }
+    }
+    #shop-slider-nav{
+        .slick-slide{
+            img{
+               margin: 0.5rem 0.5rem;
+            }
+        }
+    }
+    .woocommerce-product-gallery__image{
+        display: none!important;
+    }
     &:before{
         content: "";
         width: 12rem;
@@ -996,6 +1011,7 @@ section{
     }
     .woocommerce-product-gallery {
         margin-bottom: 4rem;
+        //z-index: 2;
     }
     .woocommerce-Price-amount{
         font-size: 4.2rem;
@@ -1010,6 +1026,7 @@ section{
     }
     .yith-wcbk-form-section {
         width: 100%;
+        //z-index: 0;
     }
     label{
         font-size: 1.4rem;

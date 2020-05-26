@@ -176,6 +176,7 @@ if ( post_password_required() ) {
 	<div class="row columns">
 
 	<div class="col-12 centered show-more-ateliers">
+
 		<span class="prev"><i class="fas fa-arrow-left"></i> <?php previous_post_link( ' %link', 'Atelier Précédent', true, '', 'product_cat' ); ?>	</span>
 		<span class="next"><?php next_post_link( ' %link', 'Atelier Suivant', true, '', 'product_cat' ); ?> <i class="fas fa-arrow-right"></i></span>
 	</div>

@@ -754,6 +754,12 @@ section .button {
       color: #930e0f !important; }
     #ProductCardContainer .show-more-ateliers .next {
       float: right; }
+  #ProductCardContainer .slick-slide img {
+    margin-top: 0rem; }
+  #ProductCardContainer #shop-slider-nav .slick-slide img {
+    margin: 0.5rem 0.5rem; }
+  #ProductCardContainer .woocommerce-product-gallery__image {
+    display: none !important; }
   #ProductCardContainer:before {
     content: "";
     width: 12rem;

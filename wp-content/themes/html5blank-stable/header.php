@@ -22,7 +22,7 @@
 		<link rel="stylesheet" src="main.css">
 
 		<script src="<?php echo get_template_directory_uri() . '/js/jquery-3.4.1.min.js'; ?>"></script>
-   		<script src="<?php echo get_template_directory_uri() . '/js/slick.min.js'; ?>"></script>
+		<script src="<?php echo get_template_directory_uri() . '/js/slick.min.js'; ?>"></script>
 		<script src="<?php echo get_template_directory_uri() . '/js/locomotive-scroll.js'; ?>"></script>
 		<script src="<?php echo get_template_directory_uri() . '/js/scrollreveal.min.js'; ?>"></script>
 
@@ -39,64 +39,85 @@
         });
 		</script>
 
-
+		<!-- gestion des modals -->
 		<script>
-		//Gestion des modals
-		$( document ).ready(function() {
-			$('.close').on('click', function(event){
-				event.stopPropagation();
-				$('.modal').removeClass('active');
+			$( document ).ready(function() {
+				$('.close').on('click', function(event){
+					event.stopPropagation();
+					$('.modal').removeClass('active');
+				});
 			});
-		});
 		</script>
-		  <script>
-		$( document ).ready(function() {
-            $('.carousel-items').slick({
-                dots: true,
-                infinite: true,
-                autoplay: true,
-                fade: false,
-                speed: 300,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                responsive: [{
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                            dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-		});
-        </script>
+		<!-- -->
+
+		<!-- carousel home -->
+		<script>
+			$( document ).ready(function() {
+				$('.carousel-items').slick({
+					dots: true,
+					infinite: true,
+					autoplay: true,
+					fade: false,
+					speed: 300,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					responsive: [{
+							breakpoint: 1024,
+							settings: {
+								slidesToShow: 3,
+								slidesToScroll: 3,
+								infinite: true,
+								dots: true
+							}
+						},
+						{
+							breakpoint: 600,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 2
+							}
+						},
+						{
+							breakpoint: 480,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+						}
+					]
+				});
+			});
+		</script>
+		<!-- -->
+
+		<!-- carousel produit -->
+		<!--script>
+			$( document ).ready(function() {
+
+				$('.slider-for').slick({
+					dots: false,
+					arrows: false,
+					infinite: true,
+					autoplay: true,
+					fade: false,
+					speed: 300,
+					slidesToShow: 1,
+					slidesToScroll: 1
+					});
+
+				$('.slider-nav').slick({
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					asNavFor: '.slider-for',
+					dots: false,
+					arrows: false,
+					centerMode: true,
+					focusOnSelect: true
+				});
+			});
+        </script-->
 	
-		<noscript>
-			<style>
-				/**
-				* Reinstate scrolling for non-JS clients
-				*/
-				.simplebar-content-wrapper {
-				overflow: auto;
-				}
-			</style>
-		</noscript>
+
 
 
 </head>
