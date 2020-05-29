@@ -129,6 +129,9 @@ html {
     html {
       font-size: 70.5% !important; } }
 
+#post-404 a {
+  color: #930e0f; }
+
 .simplebar-scrollbar::before {
   background-color: red; }
 
@@ -327,6 +330,14 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, .wpcf7-response-outpu
 #add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
   padding: 2rem; }
 
+.woocommerce-cart-form, .woocommerce-billing-fields, .woocommerce-additional-fields__field-wrapper {
+  z-index: 2 !important; }
+
+.variation dt {
+  float: none !important;
+  font-size: 1.6rem;
+  margin: 0.8rem 0rem; }
+
 #add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods {
   border-color: #0000000a; }
 
@@ -494,6 +505,9 @@ section .button {
     left: 2rem;
     font-size: 31rem !important;
     max-width: 5ch; }
+
+.woocommerce-checkout #TitleContainer h5 {
+  display: none !important; }
 
 #HeroContainer, #QuoteContainer {
   padding: 20.6rem 0rem !important; }
@@ -686,10 +700,9 @@ section .button {
   border: none !important;
   padding: 2rem; }
 
-#CartContainer table th, #CartContainer td a, #CartContainer td span, #CheckoutContainer table th, #CheckoutContainer td a, #CheckoutContainer td span {
+#CartContainer table th, #CartContainer td a, #CartContainer td span, #CartContainer td p, #CartContainer td, #CheckoutContainer table th, #CheckoutContainer td a, #CheckoutContainer td span, #CheckoutContainer td p, #CheckoutContainer td {
   font-family: 'Montserrat Light', sans-serif;
-  padding: 9px 12px;
-  line-height: 1.5em;
+  line-height: 1.2em;
   font-size: 1.6rem; }
 
 #CartContainer td, #CartContainer tr, #CartContainer th, #CheckoutContainer td, #CheckoutContainer tr, #CheckoutContainer th {
@@ -798,8 +811,10 @@ section .button {
   #ProductCardContainer .yith-wcbk-add-to-cart-button.single_add_to_cart_button {
     width: 100%;
     padding: 0.8rem 2rem !important; }
-  #ProductCardContainer .yith-wcbk-booking-form input, #ProductCardContainer .yith-wcbk-booking-form select {
-    margin: 0px; }
+  #ProductCardContainer .yith-wcbk-booking-form {
+    max-width: none !important; }
+    #ProductCardContainer .yith-wcbk-booking-form input, #ProductCardContainer .yith-wcbk-booking-form select {
+      margin: 0px; }
   #ProductCardContainer #ui-datepicker-div {
     width: 100% !important; }
   #ProductCardContainer td.ui-datepicker-current-day, #ProductCardContainer td:not(.ui-state-disabled):hover {
@@ -818,6 +833,10 @@ section .button {
     font-family: 'Montserrat Regular', sans-serif;
     text-transform: uppercase;
     margin-top: 2rem; }
+  #ProductCardContainer .product-description form, #ProductCardContainer .product-description .price {
+    display: none; }
+  #ProductCardContainer .product-card-booking input {
+    width: 100%; }
 
 .woocommerce-notices-wrapper > .modal.active:first-of-type {
   display: none !important; }

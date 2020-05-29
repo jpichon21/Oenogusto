@@ -36,7 +36,7 @@ $action = !$product->is_confirmation_required() ? 'add-to-cart' : 'booking-reque
 <?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 <div class="columns">
-<div class="col-6">
+<div class="col-12">
 
 <p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
     <form class="cart" method="post" enctype='multipart/form-data'>

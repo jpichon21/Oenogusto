@@ -172,6 +172,10 @@ html {
     }
 }
 
+#post-404 a{
+    color: $color-red;
+}
+
 .simplebar-scrollbar::before {
     background-color: red;
   }
@@ -422,6 +426,19 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, .wpcf7-response-outpu
     padding: 2rem;
 }
 
+.woocommerce-cart-form, .woocommerce-billing-fields, .woocommerce-additional-fields__field-wrapper{
+    z-index: 2!important;
+}
+
+
+.variation{
+    dt{
+        float: none !important;
+        font-size: 1.6rem;
+        margin: 0.8rem 0rem;
+    }
+}
+
 #add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods{
     border-color: #0000000a;
 }
@@ -640,7 +657,12 @@ section{
         font-size: 31rem!important;
         max-width: 5ch;
     }
+}
 
+.woocommerce-checkout #TitleContainer{
+    h5{
+        display: none!important;
+    }
 }
 
 #HeroContainer, #QuoteContainer{
@@ -895,10 +917,9 @@ section{
         border: none!important;
         padding: 2rem;
     }
-    table th, td a, td span {
+    table th, td a, td span, td p , td{
         font-family: 'Montserrat Light', sans-serif;
-        padding: 9px 12px;
-        line-height: 1.5em;
+        line-height: 1.2em;
         font-size: 1.6rem;
     }
     td, tr, th{
@@ -1055,6 +1076,7 @@ section{
         padding: 0.8rem 2rem!important;
     }
     .yith-wcbk-booking-form{
+        max-width: none!important;
         input, select{
             margin: 0px;
         }
@@ -1085,7 +1107,16 @@ section{
         text-transform: uppercase;
         margin-top: 2rem;
     }
-    
+    .product-description{
+        form, .price{
+            display: none;
+        }
+    }
+    .product-card-booking{
+        input{
+            width: 100%;
+        }
+    }
 }
 
 //  Modals

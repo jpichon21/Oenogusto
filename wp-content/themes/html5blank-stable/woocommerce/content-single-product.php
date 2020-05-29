@@ -91,64 +91,17 @@ if ( post_password_required() ) {
 					?>
 					
 			<div class="product-card-booking">
-				<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
-				<form class="cart" method="post" enctype='multipart/form-data'>
-
-					<input type="hidden" name="<?php echo $action ?>" value="<?php echo esc_attr( $product->get_id() ); ?>"/>
-
-					<?php
-					do_action( 'yith_wcbk_before_booking_form' );
-
+			<?php
 					/**
-					 * yith_wcbk_booking_form_start hook.
-					 *
-					 * @hooked yith_wcbk_booking_form_start - 10
-					 */
-					do_action( 'yith_wcbk_booking_form_start', $product );
-
-					/**
-					 * yith_wcbk_booking_form_meta hook.
-					 *
-					 * @hooked yith_wcbk_booking_form_meta - 10
-					 */
-					do_action( 'yith_wcbk_booking_form_meta', $product );
-
-					/**
-					 * yith_wcbk_booking_form_fields hook.
-					 *
-					 * @hooked yith_wcbk_booking_form_dates - 10
-					 * @hooked yith_wcbk_booking_form_persons - 20
-					 * @hooked yith_wcbk_booking_form_services - 30
-					 */
-					do_action( 'yith_wcbk_booking_form_content', $product );
-
-					/**
-					 * yith_wcbk_booking_form_message hook.
-					 *
-					 * @hooked yith_wcbk_booking_form_message - 10
-					 */
-					do_action( 'yith_wcbk_booking_form_message', $product );
-
-					/**
-					 * yith_wcbk_booking_form_end hook.
-					 *
-					 * @hooked yith_wcbk_booking_form_end - 10
-					 */
-					do_action( 'yith_wcbk_booking_form_end', $product );
+					* Hook: woocommerce_after_single_product_summary.
+					* @hooked woocommerce_template_single_price - 10
+					* @hooked woocommerce_output_product_data_tabs - 10
+					* @hooked woocommerce_upsell_display - 15
+					* @hooked woocommerce_output_related_products - 20
+					*/
+					do_action( 'woocommerce_after_single_product_summary' );
 					?>
-
-					<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-
-					<?php do_action( 'yith_wcbk_booking_before_add_to_cart_button' ); ?>
-
-					<button type="submit" class="yith-wcbk-add-to-cart-button single_add_to_cart_button button alt"
-							disabled><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
-
-					<?php do_action( 'yith_wcbk_booking_after_add_to_cart_button' ); ?>
-
-					<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
-					<?php echo '<p class="entreprise-cta-container"><a href="./contact" class="entreprise-cta">Vous êtes une entreprise ? Contactez-nous <i class="far fa-envelope"></i></a></p>' ?>
-				</form>
+				
 			</div>
 		</div>
 		<!-- -->
@@ -156,7 +109,7 @@ if ( post_password_required() ) {
 		<div class="col-2"></div>
 
 		<!-- Partie description -->
-		<div class="col-5">
+		<div class="col-5 product-description">
 					<!-- Description -->
 					<?php
 					/**

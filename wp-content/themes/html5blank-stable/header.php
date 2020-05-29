@@ -91,7 +91,7 @@
 		<!-- -->
 
 		<!-- carousel produit -->
-		<!--script>
+		<script>
 			$( document ).ready(function() {
 
 				$('.slider-for').slick({
@@ -115,7 +115,7 @@
 					focusOnSelect: true
 				});
 			});
-        </script-->
+        </script>
 	
 
 

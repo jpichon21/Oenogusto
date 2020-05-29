@@ -20,8 +20,8 @@ _deprecated_file(
             <div class="row columns">
 
                 <div class="col-5 text-left">
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Politique de confidentialité</a>
+                    <a href="./mentions-legales">Mentions légales</a>
+                    <a href="./politique-confidentialite">Politique de confidentialité</a>
                 </div>
 
                 <div class="col-2 center-text">
