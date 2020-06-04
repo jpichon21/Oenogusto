@@ -24,13 +24,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 </section>
 
 	<script>
-            ScrollReveal().reveal('.atelier-card', { delay: 600 });
-			ScrollReveal().reveal('footer', { delay: 800 });
+		$(document).ready(function () {
+			ScrollReveal().reveal('h5', { delay: 400 });
+			/*ScrollReveal().reveal('.atelier-card:first-child', { delay: 800 });*/
+			/*ScrollReveal().reveal('footer', { delay: 800 });*/
+		});
 	</script>
 
 	<script>
 		$('#ateliersNav').addClass('active');
 	</script>
+	
 	<?php get_footer(); ?>
-</div>
+
 

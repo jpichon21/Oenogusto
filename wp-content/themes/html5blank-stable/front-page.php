@@ -150,20 +150,22 @@
 
 
         <?php get_footer(); ?>
+
         <script>
             ScrollReveal().reveal('.card-1', { delay: 400 });
             ScrollReveal().reveal('.card-2', { delay: 800 });
             ScrollReveal().reveal('.card-3', { delay: 1200 });
-            ScrollReveal().reveal('h5', { delay: 1600 });
+            ScrollReveal().reveal('h5', { delay: 2000 });
+            ScrollReveal().reveal('.CTA:before', { delay: 2400 });
             ScrollReveal().reveal('#HeroTextContainer', { delay: 1600 });
-            ScrollReveal().reveal('#QuoteBlockquoteContainer', { delay: 300 });
+           /* ScrollReveal().reveal('#QuoteBlockquoteContainer', { delay: 300 });
             ScrollReveal().reveal('#QuoteTextContainer', { delay: 800 });
-            ScrollReveal().reveal('#AteliersCTA', { delay: 300 });
+           ScrollReveal().reveal('#AteliersCTA', { delay: 300 });
             ScrollReveal().reveal('#AteliersHome', { delay: 800 });
             ScrollReveal().reveal('#ContactCTA', { delay: 300 });
             ScrollReveal().reveal('#ContactHome', { delay: 800 });
-            ScrollReveal().reveal('footer', { delay: 1000 });
-	</script>
+            ScrollReveal().reveal('footer', { delay: 1000 });	*/
+	    </script>
 </body>
 
 

@@ -353,6 +353,7 @@ add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
+
 // ajouter librairie
 add_action('wp_enqueue_scripts', 'enqueue_styles');
 
@@ -367,10 +368,6 @@ function enqueue_styles() {
     wp_enqueue_style('locomotive'); // Enqueue it!
     wp_register_style('animate', get_template_directory_uri() . '/css/animate.css', array(), '1.0', 'all');
     wp_enqueue_style('animate'); // Enqueue it!
-    wp_register_style('simplebar', get_template_directory_uri() . '/css/simplebar.css', array(), '1.0', 'all');
-    wp_enqueue_style('simplebar'); // Enqueue it!
-    wp_register_style('flexslider', get_template_directory_uri() . '/css/flexslider.css', array(), '1.0', 'all');
-    wp_enqueue_style('flexslider'); // Enqueue it!
 }
 
 function enqueue_script() {
@@ -381,11 +378,6 @@ function enqueue_script() {
     wp_register_script('scroll', '/js/scrollreveal.min.js', array(), '1.0');
     wp_enqueue_script('scroll'); // Enqueue it!
     wp_register_script('scroll', '/js/simplebar.js', array(), '1.0');
-    wp_enqueue_script('simplebar'); // Enqueue it!
-    wp_register_script('kursor', '/js/kursor.js', array(), '1.0');
-    wp_enqueue_script('kursor'); // Enqueue it!
-    wp_register_script('flexslider', '/js/flexslider.min.js', array(), '1.0');
-    wp_enqueue_script('flexslider'); // Enqueue it!
 
     wp_register_script('navigation.js', '/js/navigation.js', array(), '1.0');
     wp_enqueue_script('navigation'); // Enqueue it!
@@ -465,6 +457,18 @@ function show_excerpt() {
     
 }
 
+// Locomotive
+/*add_action('wp_footer', 'locomotive_scroll_ready', 1); 
+function locomotive_scroll_ready() {
+    echo
+    "<script>
+            const scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true
+            });
+    </script>";
+}*/
+
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -507,6 +511,8 @@ add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from 
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
 add_filter( 'single_product_archive_thumbnail_size', 'wpse_287488_product_thumbnail_size' ); // image pleine
+
+
 
 // Options Page
 if( function_exists('acf_add_options_page') ) {

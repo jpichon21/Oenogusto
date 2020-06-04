@@ -136,14 +136,15 @@
         <!-- -->
 
 <script>
-        ScrollReveal().reveal('.intro-left', { delay: 300 });
-        ScrollReveal().reveal('.intro-right', { delay: 800 });
-        ScrollReveal().reveal('blockquote', { delay: 1200 });
-        ScrollReveal().reveal('#EntrepriseDemande', { delay: 300 });
+    	ScrollReveal().reveal('h5', { delay: 400 });
+        ScrollReveal().reveal('.intro-left', { delay: 800 });
+        ScrollReveal().reveal('.intro-right', { delay: 1200 });
+        ScrollReveal().reveal('blockquote', { delay: 1600 });
+      /*  ScrollReveal().reveal('#EntrepriseDemande', { delay: 300 });
         ScrollReveal().reveal('#EntrepriseCarte', { delay: 300 });
         ScrollReveal().reveal('#ContactCTA', { delay: 300 });
         ScrollReveal().reveal('#ContactHome', { delay: 800 });
-        ScrollReveal().reveal('footer', { delay: 1000 });
+        ScrollReveal().reveal('footer', { delay: 1000 });*/
 </script>
 <script>
     $('#entrepriseNav').addClass('active');

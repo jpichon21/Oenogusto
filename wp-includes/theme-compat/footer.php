@@ -41,27 +41,6 @@ _deprecated_file(
         </footer>
 
     </div>
-    <!--script>
-        (function () {
-            console.log("test");
-            const scroll = new LocomotiveScroll({
-                el: document.querySelector('[data-scroll-container]'),
-                smooth: true
-            });
-        })();
-    </script-->
-
-  
-	<script>
-		new SimpleBar(document.getElementById('simpleWrapper'), { autoHide: false });
-    </script>
-    
-	<script>
-				new kursor({
-					type: 1
-				});
-			</script>
-			
 
 
     <script>
@@ -99,9 +78,15 @@ _deprecated_file(
                 ]
             });
         </script>
+        <script>
+            const scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true
+            });
+    </script>
+ 
 
-<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
-<?php /* "Just what do you think you're doing Dave?" */ ?>
+
 
 		<?php wp_footer(); ?>
 </body>

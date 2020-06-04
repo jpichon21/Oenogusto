@@ -159,6 +159,17 @@ font-style: italic;
     box-shadow: none!important;
 }
 
+/* disable if scroll reveal not enabled */
+img, .product-price-booking, .product-description{
+    backface-visibility: hidden!important;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+ #HeroContainer, .product-price-booking, .product-description, h5{
+    visibility: hidden;
+}
+/**/
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -326,11 +337,6 @@ blockquote{
     display: inline-block!important;
     border-radius: 0px!important;
     font-weight: 400!important;
-   /* &:hover, &:active, &:focus{
-        background-color: $color-red;
-        color: white!important;
-        transition: 0.5s ease;
-    }*/
     z-index: 0;
     &:before{
         content:'';
@@ -371,6 +377,13 @@ aside{
 }
 
 /** FORM **/
+select {
+    -webkit-appearance: none!important;
+    -moz-appearance: none!important;
+    text-indent: 1px!important;
+    text-overflow: ''!important;
+}
+
 form{
     input, textarea, select{
         width: 100%;
@@ -466,13 +479,13 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, .wpcf7-response-outpu
 
 
 body{
-    //padding: 2.5rem;
+    padding: 2rem;
     .wrapper{
         background-color: $color-beige!important;
         overflow: hidden;
     }
     .pageContainer{
-        min-height: 100vh;
+        //min-height: 100vh;
         .post-edit-link{
             display: none!important;
         }
@@ -668,9 +681,9 @@ section{
 #HeroContainer, #QuoteContainer{
     padding: $global-spacing 0rem!important;
     h5{
-        opacity: 0.025;
+        opacity: 0.035;
         position: absolute;
-        left: 2rem;
+        left: -20rem;
         font-size: 35rem!important;
     }
 }
@@ -962,17 +975,13 @@ section{
 
 
 #ProductContainer{
-    min-height: 80vh;
     h1{
-        font-size: 4.8rem!important;
-        line-height: 4.8rem!important;
+        font-size: 3.8rem!important;
+        line-height: 3.8rem!important;
         max-width: 60rem;
         font-family: 'Montserrat Light', sans-serif;
         margin: 0 auto;
         margin-bottom: 4rem;
-    }
-    div{
-        //display: none;
     }
     .woocommerce-product-details__short-description, .product_meta{
         display: none!important;
@@ -1055,9 +1064,6 @@ section{
     }
     path{
         color:#c1c1c1;
-    }
-    select::-ms-expand {
-        display: none!important;
     }
     .yith-wcbk-form-section{
         font-size: 1.4rem;

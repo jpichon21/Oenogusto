@@ -29,5 +29,10 @@
 <script>
     $('#contactNav').addClass('active');
 </script>
+<script>
+    	ScrollReveal().reveal('h5', { delay: 400 });
+        ScrollReveal().reveal('.wpcf7', { delay: 800 });
+        ScrollReveal().reveal('footer', { delay: 1200 });
+</script>
 
     <?php get_footer(); ?>

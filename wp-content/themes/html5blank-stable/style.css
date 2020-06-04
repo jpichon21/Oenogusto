@@ -117,6 +117,15 @@ font-style: italic;
   outline: none !important;
   box-shadow: none !important; }
 
+/* disable if scroll reveal not enabled */
+img, .product-price-booking, .product-description {
+  backface-visibility: hidden !important;
+  transform: translate3d(0px, 0px, 0px); }
+
+#HeroContainer, .product-price-booking, .product-description, h5 {
+  visibility: hidden; }
+
+/**/
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -253,11 +262,6 @@ blockquote {
   display: inline-block !important;
   border-radius: 0px !important;
   font-weight: 400 !important;
-  /* &:hover, &:active, &:focus{
-        background-color: $color-red;
-        color: white!important;
-        transition: 0.5s ease;
-    }*/
   z-index: 0; }
   .button:before, #SeeButton:before, .checkout-button:before, input[type="submit"]:before {
     content: '';
@@ -288,6 +292,12 @@ aside {
   color: #930e0f; }
 
 /** FORM **/
+select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  text-indent: 1px !important;
+  text-overflow: "" !important; }
+
 form input, form textarea, form select {
   width: 100%;
   max-width: 100%;
@@ -357,12 +367,11 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, .wpcf7-response-outpu
 .woocommerce-products-header, .woocommerce-form-login {
   display: none !important; }
 
-body .wrapper {
-  background-color: #f7f6f3 !important;
-  overflow: hidden; }
-
-body .pageContainer {
-  min-height: 100vh; }
+body {
+  padding: 2rem; }
+  body .wrapper {
+    background-color: #f7f6f3 !important;
+    overflow: hidden; }
   body .pageContainer .post-edit-link {
     display: none !important; }
 
@@ -512,9 +521,9 @@ section .button {
 #HeroContainer, #QuoteContainer {
   padding: 20.6rem 0rem !important; }
   #HeroContainer h5, #QuoteContainer h5 {
-    opacity: 0.025;
+    opacity: 0.035;
     position: absolute;
-    left: 2rem;
+    left: -20rem;
     font-size: 35rem !important; }
 
 #EntrepriseIntro {
@@ -736,20 +745,20 @@ section .button {
 #CartContainer .wc-proceed-to-checkout, #CheckoutContainer .wc-proceed-to-checkout {
   text-align: right; }
 
-#ProductContainer {
-  min-height: 80vh; }
-  #ProductContainer h1 {
-    font-size: 4.8rem !important;
-    line-height: 4.8rem !important;
-    max-width: 60rem;
-    font-family: 'Montserrat Light', sans-serif;
-    margin: 0 auto;
-    margin-bottom: 4rem; }
-  #ProductContainer .woocommerce-product-details__short-description, #ProductContainer .product_meta {
-    display: none !important; }
-  #ProductContainer .summary.entry-summary {
-    width: 100%;
-    text-align: center; }
+#ProductContainer h1 {
+  font-size: 3.8rem !important;
+  line-height: 3.8rem !important;
+  max-width: 60rem;
+  font-family: 'Montserrat Light', sans-serif;
+  margin: 0 auto;
+  margin-bottom: 4rem; }
+
+#ProductContainer .woocommerce-product-details__short-description, #ProductContainer .product_meta {
+  display: none !important; }
+
+#ProductContainer .summary.entry-summary {
+  width: 100%;
+  text-align: center; }
 
 #ProductCardContainer {
   position: relative; }
@@ -798,8 +807,6 @@ section .button {
     font-family: 'Montserrat Light', sans-serif; }
   #ProductCardContainer path {
     color: #c1c1c1; }
-  #ProductCardContainer select::-ms-expand {
-    display: none !important; }
   #ProductCardContainer .yith-wcbk-form-section {
     font-size: 1.4rem; }
   #ProductCardContainer .tabs.wc-tabs, #ProductCardContainer h2 {
