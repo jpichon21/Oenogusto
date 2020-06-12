@@ -21,7 +21,7 @@
 
 
 /** Nom de la base de données de WordPress. */
-define( 'DB_NAME', 'oenotest' );
+define( 'DB_NAME', 'oenogustlycg' );
 
 /** Utilisateur de la base de données MySQL. */
 define( 'DB_USER', 'oenogustlycg' );
