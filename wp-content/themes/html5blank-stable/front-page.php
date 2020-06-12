@@ -152,6 +152,11 @@
         <?php get_footer(); ?>
 
         <script>
+                $('#accueil').addClass('active');
+        </script>
+
+
+        <script>
             ScrollReveal().reveal('.card-1', { delay: 400 });
             ScrollReveal().reveal('.card-2', { delay: 800 });
             ScrollReveal().reveal('.card-3', { delay: 1200 });

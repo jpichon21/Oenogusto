@@ -107,6 +107,7 @@ if ( post_password_required() ) {
 								*/
 								do_action( 'woocommerce_after_single_product_summary' );
 								?>
+								<span class="disclaimer">IMPORTANT : En réservant cet atelier, vous certifiez être âgé de plus de 18 ans. </span>
 						</div>
 					</div>
 					<!-- -->
@@ -136,22 +137,20 @@ if ( post_password_required() ) {
 				<div class="row columns">
 
 					<div class="col-12 centered show-more-ateliers">
-						<!--?php 
-						$previous = previous_post_link( ' %link', 'Atelier Précédent', true, '', 'product_cat' );
+						<?php 
+						$previous = previous_post_link( ' %link', '<i class="fas fa-arrow-left"></i> Atelier Précédent', true, '', 'product_cat' );
 						if(isset($previous)){
 							echo "
 							<span class='prev'><i class='fas fa-arrow-left'></i>
 								<?php previous_post_link( ' %link', 'Atelier Précédent', true, '', 'product_cat' ); ?>
 							</span> ";
-						} ?-->
+						} ?>
 
-						<span class='prev'><i class='fas fa-arrow-left'></i>
-							<?php previous_post_link( ' %link', 'Atelier Précédent', true, '', 'product_cat' ); ?>
-						</span>
+						
 
-						<span
-							class="next"><?php next_post_link( ' %link', 'Atelier Suivant', true, '', 'product_cat' ); ?>
-							<i class="fas fa-arrow-right"></i></span>
+				
+						<span class="next"><?php next_post_link( ' %link', 'Atelier Suivant 	<i class="fas fa-arrow-right"></i></span>', true, '', 'product_cat' ); ?>
+						
 					</div>
 
 				</div>

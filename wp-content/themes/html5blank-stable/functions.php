@@ -457,6 +457,16 @@ function show_excerpt() {
     
 }
 
+// Passer la durée a 2h30
+if ( !function_exists( 'yith_wcbk_customization_add_custom_minutes_duration' ) ) {
+    add_filter( 'yith_wcbk_duration_minute_select_options', 'yith_wcbk_customization_add_custom_minutes_duration' );
+    function yith_wcbk_customization_add_custom_minutes_duration( $durations ) {
+        $durations[ '150' ] = '150';
+        asort( $durations );
+        return $durations;
+    }
+}
+
 // Locomotive
 /*add_action('wp_footer', 'locomotive_scroll_ready', 1); 
 function locomotive_scroll_ready() {

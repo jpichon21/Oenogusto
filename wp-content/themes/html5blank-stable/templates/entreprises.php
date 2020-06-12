@@ -62,9 +62,7 @@
                             <h3 class="red">Pour les Entreprises</h3>
                             <h2>Atelier <br><span class="red">à la Demande</span></h2>
                             <p>                               
-                                Vous êtes une entreprise ? Nous proposons des ateliers  sur-mesure Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ultricies dolor. 
-                                Vestibulum sollicitudin purus non nunc accumsan, vitae mollis nibh volutpat. 
-                                Integer eget sollicitudin lacus.
+                                Pour vous, entreprises et institutions, Oenogusto s'emploie à concoter des événements sur-mesure, avec pour uniques constantes l'univers du vin et le bien-être de ses hôtes.
                             </p>
                             <a href="./contact" class="button"> Demander un devis </a>
                         </div>
@@ -103,9 +101,7 @@
                             <h3 class="red">Pour Entreprises et Particuliers</h3>
                             <h2>Atelier <br><span class="red">à la Carte</span></h2>
                             <p>                               
-                                Vous êtes une entreprise ? Nous proposons des ateliers  sur-mesure Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ultricies dolor. 
-                                Vestibulum sollicitudin purus non nunc accumsan, vitae mollis nibh volutpat. 
-                                Integer eget sollicitudin lacus.
+                                De la découverte des arcanes du vin, à la mise en émoi de vos sens grâce à une dégustation détendue, en équipe, Oenogusto vous propose tout un panel d'ateliers et d'expériences, non conventionnelles, autour du vin, de son histoire, de ses arômes...
                             </p>
                             <a href="./ateliers" class="button"> Découvrir les ateliers</a>
                         </div>

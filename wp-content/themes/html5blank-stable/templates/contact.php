@@ -25,6 +25,24 @@
             <?php echo get_field('contact_form'); ?>
             
         </section>
+
+        <section id="CadeauCta" class="col-12 centered CTA" data-scroll-section>
+            <div class="row columns">
+                <div class="col-12 center-text">
+                    <h4 class="red"> Carte Cadeau</h4>
+                </div>
+            </div>
+            </section>
+
+            <section id="ContactHome" class="col-12 centered" data-scroll-section>
+            <div class="row columns">
+                <div class="col-9 centered center-text">
+                    <p>Vous souhaitez offrir un moment de convivialité, de découverte et de détente ? </br>Pensez à nos cartes cadeaux !</p>
+                    <a href="./produit/carte-cadeau/" class="button"> Offrir une carte </a>
+                </div>
+        </section>
+
+</section>
         
 <script>
     $('#contactNav').addClass('active');

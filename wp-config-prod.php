@@ -30,7 +30,7 @@ define( 'DB_USER', 'oenogustlycg' );
 define( 'DB_PASSWORD', 'EizJEYVcRra7w8E' );
 
 /** Adresse de l’hébergement MySQL. */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'oenogustlycg.mysql.db' );
 
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
 define( 'DB_CHARSET', 'utf8mb4' );

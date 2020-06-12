@@ -28,8 +28,8 @@ if ( $attachment_ids ) {
     $columns    = apply_filters( 'woocommerce_product_thumbnails_columns', 3 );
 	?>
 	
-		<div id="shop-slider" class="slider-for">
-		<?php
+		<!--div id="shop-slider" class="slider-for">
+		<--?php
 
 				foreach ( $attachment_ids as $attachment_id ) {
 					$image_link = wp_get_attachment_url( $attachment_id );
@@ -51,8 +51,8 @@ if ( $attachment_ids ) {
 			?>
 		</div>
 		
-		<div id="shop-slider-nav" class="slider-nav">
-		<?php
+		<div id="shop-slider-nav" class="slider-nav>
+		<--?php
 
 				foreach ( $attachment_ids as $attachment_id ) {
 					$image_link = wp_get_attachment_url( $attachment_id );
@@ -72,6 +72,6 @@ if ( $attachment_ids ) {
 				}
 
 			?>
-		</div>
+		</div-->
 	   <?php
 }

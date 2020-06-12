@@ -140,6 +140,7 @@
 						</a>
 					</div>
 					<ul>
+						<li><a id="accueil" href="./home">Accueil</a></li>
 						<li><a id="ateliersNav" href="./ateliers">Ateliers</a></li>
 						<li><a id="entrepriseNav" href="./entreprises">Entreprises</a></li>
 						<li><a id="contactNav" href="./contact">Contact</a></li>
