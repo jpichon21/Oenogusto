@@ -46,3 +46,6 @@ defined( 'ABSPATH' ) || exit;
 	</div>
 	
 </div>
+<script>
+    $('#accountNav').addClass('active');
+</script>

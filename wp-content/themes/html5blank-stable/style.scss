@@ -557,8 +557,13 @@ div.wpcf7-acceptance-missing,
 /** LAYOUT **/
 .woocommerce-products-header,
 .woocommerce-form-login {
+    //display: none !important;
+}
+
+.woocommerce-products-header {
     display: none !important;
 }
+
 
 
 body {
@@ -1446,7 +1451,7 @@ section {
 }
 
 .woocommerce-form.woocommerce-form-login.login {
-    display: none !important;
+    //display: none !important;
 }
 
 .btn.btn-clear {
@@ -1480,5 +1485,12 @@ section {
         a, a:focus, a:visited, a:active{
         color: $color-red!important;
         }
+    }
+}
+
+#loginContainer{
+    background-color: #ffffff8c;
+    form{
+        border: none!important;
     }
 }
