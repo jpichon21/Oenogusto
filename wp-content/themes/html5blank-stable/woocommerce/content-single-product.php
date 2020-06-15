@@ -86,15 +86,18 @@ if ( post_password_required() ) {
 						<p class="ariane"><a href="./ateliers">Ateliers Oenologiques</a> > <a
 								href="<?php echo get_permalink( $product->ID ); ?>"><?php echo $product->get_title(); ?></a>
 						</p>
-						<?php
-							/**
-							 * Hook: woocommerce_before_single_product_summary.
-							 *
-							 * @hooked woocommerce_show_product_sale_flash - 10
-							 * @hooked woocommerce_show_product_images - 20
-							 */
-							do_action( 'woocommerce_before_single_product_summary' );
-							?>
+						<div class="product-image">
+							<?php
+								/**
+								 * Hook: woocommerce_before_single_product_summary.
+								 *
+								 * @hooked woocommerce_show_product_sale_flash - 10
+								 * @hooked woocommerce_show_product_images - 20
+								 */
+								do_action( 'woocommerce_before_single_product_summary' );
+								?>
+						</div>
+
 
 						<div class="product-card-booking">
 							<?php
@@ -107,9 +110,38 @@ if ( post_password_required() ) {
 								*/
 								do_action( 'woocommerce_after_single_product_summary' );
 								?>
-								<span class="disclaimer">IMPORTANT : En réservant cet atelier, vous certifiez être âgé de plus de 18 ans. </span>
+							
 						</div>
+
+
+
+						<!-- Titre + prix + ajouter au panier -->
+						<div class="summary-duplicate">
+							<?php
+									/**
+									 * Hook: woocommerce_single_product_summary.
+									 *
+									 * @hooked woocommerce_template_single_title - 5
+									 * @hooked woocommerce_template_single_rating - 10
+									 * @hooked woocommerce_template_single_price - 10
+									 * @hooked woocommerce_template_single_excerpt - 20
+									 * @hooked woocommerce_template_single_add_to_cart - 30
+									 * @hooked woocommerce_template_single_meta - 40
+									 * @hooked woocommerce_template_single_sharing - 50
+									 * @hooked WC_Structured_Data::generate_product_data() - 60
+									 */
+									do_action( 'woocommerce_single_product_summary' );
+								?>
+									<span class="disclaimer">IMPORTANT : En réservant cet article, vous certifiez être âgé de
+								plus de 18 ans. </span>
+						</div>
+
+
+
+
+
 					</div>
+					
 					<!-- -->
 
 					<div class="col-2"></div>
@@ -143,14 +175,15 @@ if ( post_password_required() ) {
 							echo "
 							<span class='prev'><i class='fas fa-arrow-left'></i>
 								<?php previous_post_link( ' %link', 'Atelier Précédent', true, '', 'product_cat' ); ?>
-							</span> ";
+						</span> ";
 						} ?>
 
-						
 
-				
-						<span class="next"><?php next_post_link( ' %link', 'Atelier Suivant 	<i class="fas fa-arrow-right"></i></span>', true, '', 'product_cat' ); ?>
-						
+
+
+						<span
+							class="next"><?php next_post_link( ' %link', 'Atelier Suivant 	<i class="fas fa-arrow-right"></i></span>', true, '', 'product_cat' ); ?>
+
 					</div>
 
 				</div>

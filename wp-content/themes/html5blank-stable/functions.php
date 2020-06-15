@@ -503,6 +503,7 @@ remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_
 remove_action( 'woocommerce_before_cart', 'action_woocommerce_before_cart', 10, 1 ); 
 remove_action( 'woocommerce_cart_is_empty', 'action_woocommerce_cart_is_empty', 10, 0 ); 
 
+
 // Add Filters
 add_filter('avatar_defaults', 'html5blankgravatar'); // Custom Gravatar in Settings > Discussion
 add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class (Starkers build)

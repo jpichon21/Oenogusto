@@ -15,22 +15,34 @@
  * @version 3.5.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined( 'ABSPATH' ) || exit; 
+?>
 
-/**
- * My Account navigation.
- *
- * @since 2.6.0
- */
-do_action( 'woocommerce_account_navigation' ); ?>
+<div id="AccountContainer" class="col-9 centered" data-scroll-section>
+	<div class="row columns">
 
-<div class="woocommerce-MyAccount-content">
 	<?php
 		/**
-		 * My Account content.
+		 * My Account navigation.
 		 *
 		 * @since 2.6.0
 		 */
-		do_action( 'woocommerce_account_content' );
+		echo '<div class="col-4">';
+		do_action( 'woocommerce_account_navigation' ); 
+		echo '</div>';
 	?>
+
+	<div class="col-2"></div>
+
+	<div class="woocommerce-MyAccount-content col-6">
+		<?php
+			/**
+			 * My Account content.
+			 *
+			 * @since 2.6.0
+			 */
+			do_action( 'woocommerce_account_content' );
+		?>
+	</div>
+	
 </div>

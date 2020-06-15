@@ -60,7 +60,7 @@
 				infinite: true,
 				autoplay: true,
 				fade: true,
-  				cssEase: 'linear',
+				cssEase: 'linear',
 				speed: 300,
 				slidesToShow: 1,
 				slidesToScroll: 1,
@@ -129,7 +129,7 @@
 
 <body <?php body_class(); ?>>
 	<!-- wrapper -->
-	<div class="wrapper" >
+	<div class="wrapper">
 
 		<div class="columns col-12 centered">
 			<header class="col-12">
@@ -140,14 +140,17 @@
 						</a>
 					</div>
 					<ul>
-						<li><a id="accueil" href="./home">Accueil</a></li>
-						<li><a id="ateliersNav" href="./ateliers">Ateliers</a></li>
-						<li><a id="entrepriseNav" href="./entreprises">Entreprises</a></li>
-						<li><a id="contactNav" href="./contact">Contact</a></li>
-						<li><a id="cartNav" href="./panier"><i class="fas fa-shopping-cart"
+						<!--li><a id="accueil" href="./home">Accueil</a></li-->
+						<li><a id="ateliersNav" href="<?php echo get_permalink('13'); ?>">Ateliers</a></li>
+		
+						<li><a id="entrepriseNav"  href="<?php echo get_permalink('25'); ?>">Entreprises</a></li>
+						<li><a id="contactNav" href="<?php echo get_permalink('9'); ?>">Contact</a></li>
+						<li><a id="accountNav" href="<?php echo get_permalink('22'); ?>"><i class="fas fa-user"
+									style="margin-right:0.6rem"></i>Compte</a></li>
+						<li><a id="cartNav" href="<?php echo get_permalink('17'); ?>"><i class="fas fa-shopping-cart"
 									style="margin-right:0.6rem"></i>Panier</a></li>
+
 					</ul>
 				</nav>
-
 			</header>
 		</div>

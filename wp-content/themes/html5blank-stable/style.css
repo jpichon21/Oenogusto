@@ -506,10 +506,10 @@ header {
       header nav ul li {
         display: inline-block;
         text-align: left;
-        margin: 0rem 2.0rem; }
+        margin: 0rem 1.6rem; }
         header nav ul li a {
           font-family: 'Montserrat Regular';
-          font-size: 1.4rem;
+          font-size: 1.3rem;
           line-height: 2.4rem;
           color: #8a8988;
           transition: 0.5s ease;
@@ -896,6 +896,26 @@ section .button {
 #ProductContainer .summary.entry-summary {
   width: 100%;
   text-align: center; }
+  #ProductContainer .summary.entry-summary .cart {
+    display: none !important; }
+
+#ProductContainer .summary-duplicate {
+  position: relative; }
+  #ProductContainer .summary-duplicate h1, #ProductContainer .summary-duplicate .gift-certificates p {
+    display: none; }
+  #ProductContainer .summary-duplicate .gift-certificates {
+    position: absolute;
+    top: 0px; }
+    #ProductContainer .summary-duplicate .gift-certificates li {
+      color: transparent; }
+  #ProductContainer .summary-duplicate .quantity {
+    margin-top: 9rem;
+    width: 100%;
+    margin-bottom: 1.2rem; }
+  #ProductContainer .summary-duplicate .qty {
+    width: 100%;
+    text-align: left;
+    margin: 0 auto; }
 
 #ProductCardContainer {
   position: relative; }
@@ -939,7 +959,8 @@ section .button {
   #ProductCardContainer .woocommerce-Price-amount {
     font-size: 4.2rem;
     color: #930e0f !important;
-    float: left; }
+    float: left;
+    font-family: 'Montserrat Regular', sans-serif; }
   #ProductCardContainer .yith-wcbk-form-section-duration input,
   #ProductCardContainer .yith-wcbk-form-section-duration label {
     display: inline-block !important;
@@ -960,7 +981,7 @@ section .button {
     border: none !important; }
   #ProductCardContainer .woocommerce-product-gallery {
     width: 100%; }
-  #ProductCardContainer .yith-wcbk-add-to-cart-button.single_add_to_cart_button {
+  #ProductCardContainer .yith-wcbk-add-to-cart-button.single_add_to_cart_button, #ProductCardContainer .single_add_to_cart_button.button.alt {
     width: 100%;
     padding: 0.8rem 2rem !important; }
   #ProductCardContainer .yith-wcbk-booking-form {
@@ -1061,3 +1082,11 @@ section .button {
 
 #post-21 .monetico-thanks, #post-21 .monetico-form {
   text-align: center; }
+
+#AccountContainer {
+  margin-top: 4rem !important;
+  font-size: 1.6rem;
+  background-color: #ffffff8c;
+  padding: 4rem 2rem; }
+  #AccountContainer .woocommerce-MyAccount-navigation a, #AccountContainer .woocommerce-MyAccount-navigation a:focus, #AccountContainer .woocommerce-MyAccount-navigation a:visited, #AccountContainer .woocommerce-MyAccount-navigation a:active {
+    color: #930e0f !important; }

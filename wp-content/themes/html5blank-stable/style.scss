@@ -662,11 +662,11 @@ header {
             li {
                 display: inline-block;
                 text-align: left;
-                margin: 0rem 2.0rem;
+                margin: 0rem 1.6rem;
 
                 a {
                     font-family: 'Montserrat Regular';
-                    font-size: 1.4rem;
+                    font-size: 1.3rem;
                     line-height: 2.4rem;
                     color: $color-grey;
                     transition: 0.5s ease;
@@ -1179,6 +1179,34 @@ section {
     .summary.entry-summary {
         width: 100%;
         text-align: center;
+        .cart{
+            display: none!important;
+        }
+
+    }
+
+    .summary-duplicate{
+        position: relative;
+        h1, .gift-certificates p{
+            display: none;
+        }
+        .gift-certificates{
+            position: absolute;
+            top:0px;
+            li{
+                color: transparent;
+            }
+        }
+        .quantity{
+            margin-top: 9rem;
+            width: 100%;
+            margin-bottom: 1.2rem;
+        }
+        .qty{
+            width: 100%;
+            text-align: left;
+            margin: 0 auto;
+        }
     }
 }
 
@@ -1258,6 +1286,7 @@ section {
         font-size: 4.2rem;
         color: $color-red !important;
         float: left;
+        font-family: 'Montserrat Regular', sans-serif;
     }
 
     .yith-wcbk-form-section-duration {
@@ -1300,7 +1329,7 @@ section {
         width: 100%;
     }
 
-    .yith-wcbk-add-to-cart-button.single_add_to_cart_button {
+    .yith-wcbk-add-to-cart-button.single_add_to_cart_button, .single_add_to_cart_button.button.alt {
         width: 100%;
         padding: 0.8rem 2rem !important;
     }
@@ -1438,5 +1467,18 @@ section {
     }
     .monetico-thanks, .monetico-form{
         text-align: center;
+    }
+}
+
+//compte
+#AccountContainer{
+    margin-top: 4rem!important;
+    font-size: 1.6rem;
+    background-color: #ffffff8c;
+    padding: 4rem 2rem;
+    .woocommerce-MyAccount-navigation{
+        a, a:focus, a:visited, a:active{
+        color: $color-red!important;
+        }
     }
 }
