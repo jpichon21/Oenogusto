@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php /* Template Name: Politique de Confidentialite  */  ?>
+<?php /* Template Name: Cookies  */  ?>
 
 
 <body>
@@ -9,7 +9,7 @@
         <section id="TitleContainer" class="col-12 centered " data-scroll-section>
             <div class="row columns ">
                 <div class="col-12 centered center-text">
-                    <h1>Conditions Générales de Vente </h1>
+                    <h1>Utilisation des Cookies </h1>
 
                 </div>
             </div>
@@ -23,7 +23,7 @@
         <section id="pageContent" class="col-12 centered" data-scroll-section>
             <div class="row columns">
                 <div class="col-9 centered">
-                <p> <?php the_field('politique') ?></p>
+                <p> <?php the_field('cookies') ?></p>
                 </div>
             </div>
 
