@@ -1,3 +1,11 @@
+<!---------------------------------------->
+<!---------------------------------------->
+<!--- DEVELOPPEMENT PAR NCP MULTIMEDIA --->
+<!------- Pour Agence Citron Givré ------->
+<!------https://ncpmultimedia.com/-------->
+<!------mail: ncpmedia21@gmail.com-------->
+<!---------------------------------------->
+<!---------------------------------------->
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 
