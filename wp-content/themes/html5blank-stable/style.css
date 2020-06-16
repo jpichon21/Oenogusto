@@ -1189,8 +1189,8 @@ section .button {
 
 @media (max-width: 1024px) {
   #menuNav {
-    position: relative;
-    left: 0rem; } }
+    position: fixed;
+    left: 1rem; } }
 
 @media (max-width: 1024px) {
   #ContactHome {

@@ -7,7 +7,6 @@ $color-beige: #f7f6f3;
 $color-grey: #8a8988;
 $color-red: #930e0f;
 $color-black: #0e0e0e;
-
 $global-spacing: 20.6rem;
 
 
@@ -1637,8 +1636,8 @@ blockquote {
 
 #menuNav {
     @include media('<=mobile') {
-        position: relative;
-        left: 0rem;
+        position: fixed;
+        left: 1rem;
     }
 
 }
