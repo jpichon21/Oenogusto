@@ -1,6 +1,6 @@
 @import 'include-media.scss';
 /*******BREAKPOINTS********/
-$breakpoints: (small: 0px, xsmall: 345px, mobile: 435px, tablet: 768px, large: 1024px, xlarge: 1280px, cardbkp: 1298px, xxlarge: 1440px, laptop: 1680px, hirez: 1780px);
+$breakpoints: ( mobile: 1024px, large: 1024px, xlarge: 1280px, cardbkp: 1298px, xxlarge: 1440px, laptop: 1680px, hirez: 1780px);
 
 /*******VARIABLES*********/
 $color-beige: #f7f6f3;
@@ -555,11 +555,6 @@ div.wpcf7-acceptance-missing,
 }
 
 /** LAYOUT **/
-.woocommerce-products-header,
-.woocommerce-form-login {
-    //display: none !important;
-}
-
 .woocommerce-products-header {
     display: none !important;
 }
@@ -568,6 +563,9 @@ div.wpcf7-acceptance-missing,
 
 body {
     padding: 2rem;
+    @include media('<=mobile') {
+        padding: 0rem!important;
+    }
 
     .wrapper {
         background-color: $color-beige !important;
@@ -575,8 +573,6 @@ body {
     }
 
     .pageContainer {
-
-        //min-height: 100vh;
         .post-edit-link {
             display: none !important;
         }
@@ -614,8 +610,6 @@ footer {
         line-height: 3.2rem;
 
         div {
-            //position: absolute;
-            //bottom: 0;
             margin-top: 3.4rem;
         }
     }
@@ -1579,6 +1573,24 @@ form {
 
 }
 
+blockquote {
+    @include media('<=mobile') {
+        text-align: center;
+
+        &:before,
+        &::after {
+            display: none !important;
+        }
+    }
+}
+
+//Mobile Nav
+.main-nav{
+    @include media('<=mobile') {
+        display: none!important;
+    }
+}
+
 //Home
 #HeroCardsContainer {
     @include media('<=mobile') {
@@ -1671,17 +1683,6 @@ h2 {
     @include media('<=mobile') {
         padding: 6rem 0rem 6rem 0rem !important;
     }
-
-    blockquote {
-        @include media('<=mobile') {
-            text-align: center;
-
-            &:before,
-            &::after {
-                display: none !important;
-            }
-        }
-    }
 }
 
 #EntrepriseDemande,
@@ -1749,46 +1750,55 @@ h2 {
     }
 }
 
-#ProductCardContainer .show-more-ateliers span, #ProductCardContainer .show-more-ateliers i, #ProductCardContainer .show-more-ateliers a {
+#ProductCardContainer .show-more-ateliers span,
+#ProductCardContainer .show-more-ateliers i,
+#ProductCardContainer .show-more-ateliers a {
     @include media('<=mobile') {
         font-size: 1.2rem;
     }
 }
 
-#ProductCardContainer .duration-wrapper{
+#ProductCardContainer .duration-wrapper {
     @include media('<=mobile') {
-        text-align: center!important;
+        text-align: center !important;
     }
 }
 
-#ProductCardContainer .woocommerce-Price-amount{
+#ProductCardContainer .woocommerce-Price-amount {
     @include media('<=mobile') {
-        float: none!important;
+        float: none !important;
     }
 }
 
-.price{
+.price {
     @include media('<=mobile') {
-        text-align: center!important;
+        text-align: center !important;
     }
 }
 
 //Cart
-#CartContainer .wc-proceed-to-checkout, #CheckoutContainer .wc-proceed-to-checkout {
+#CartContainer .wc-proceed-to-checkout,
+#CheckoutContainer .wc-proceed-to-checkout {
     @include media('<=mobile') {
         text-align: center;
     }
 }
 
-#CartContainer #coupon_code, #CheckoutContainer #coupon_code {
+#CartContainer #coupon_code,
+#CheckoutContainer #coupon_code {
     @include media('<=mobile') {
-        width: 100%!important;
+        width: 100% !important;
         margin-bottom: 1rem;
     }
 }
 
-#CartContainer, #CheckoutContainer{
-    .col-9{
+#CartContainer,
+#CheckoutContainer {
+    .post-edit-link {
+        display: none !important;
+    }
+
+    .col-9 {
         @include media('<=mobile') {
             width: 90% !important;
         }
@@ -1796,31 +1806,119 @@ h2 {
 }
 
 
-.woocommerce-cart-form__contents{
+.woocommerce-cart-form__contents {
     @include media('<=mobile') {
-        text-align: left!important;
+        text-align: left !important;
     }
 }
 
-.woocommerce table.shop_table_responsive tr td, .woocommerce-page table.shop_table_responsive tr td {
+.woocommerce table.shop_table_responsive tr td,
+.woocommerce-page table.shop_table_responsive tr td {
     @include media('<=mobile') {
-        text-align: left!important;
+        text-align: left !important;
     }
 }
 
-.woocommerce table.shop_table_responsive tr td::before, .woocommerce-page table.shop_table_responsive tr td::before {
+.woocommerce table.shop_table_responsive tr td::before,
+.woocommerce-page table.shop_table_responsive tr td::before {
     @include media('<=mobile') {
-        float: none!important;
+        float: none !important;
     }
 }
 
 
-.woocommerce #content table.cart td.actions .coupon .button.alt, .woocommerce #content table.cart td.actions .coupon .input-text+.button, .woocommerce table.cart td.actions .coupon .button.alt, .woocommerce table.cart td.actions .coupon .input-text+.button, .woocommerce-page #content table.cart td.actions .coupon .button.alt, .woocommerce-page #content table.cart td.actions .coupon .input-text+.button, .woocommerce-page table.cart td.actions .coupon .button.alt, .woocommerce-page table.cart td.actions .coupon .input-text+.button {
+.woocommerce #content table.cart td.actions .coupon .button.alt,
+.woocommerce #content table.cart td.actions .coupon .input-text+.button,
+.woocommerce table.cart td.actions .coupon .button.alt,
+.woocommerce table.cart td.actions .coupon .input-text+.button,
+.woocommerce-page #content table.cart td.actions .coupon .button.alt,
+.woocommerce-page #content table.cart td.actions .coupon .input-text+.button,
+.woocommerce-page table.cart td.actions .coupon .button.alt,
+.woocommerce-page table.cart td.actions .coupon .input-text+.button {
     @include media('<=mobile') {
-        float: none!important;
+        float: none !important;
     }
 }
 
-.woocommerce #content table.cart td.actions .coupon .button, .woocommerce #content table.cart td.actions .coupon .input-text, .woocommerce #content table.cart td.actions .coupon input, .woocommerce table.cart td.actions .coupon .button, .woocommerce table.cart td.actions .coupon .input-text, .woocommerce table.cart td.actions .coupon input, .woocommerce-page #content table.cart td.actions .coupon .button, .woocommerce-page #content table.cart td.actions .coupon .input-text, .woocommerce-page #content table.cart td.actions .coupon input, .woocommerce-page table.cart td.actions .coupon .button, .woocommerce-page table.cart td.actions .coupon .input-text, .woocommerce-page table.cart td.actions .coupon input {
-    width: 100%; 
+.woocommerce #content table.cart td.actions .coupon .button,
+.woocommerce #content table.cart td.actions .coupon .input-text,
+.woocommerce #content table.cart td.actions .coupon input,
+.woocommerce table.cart td.actions .coupon .button,
+.woocommerce table.cart td.actions .coupon .input-text,
+.woocommerce table.cart td.actions .coupon input,
+.woocommerce-page #content table.cart td.actions .coupon .button,
+.woocommerce-page #content table.cart td.actions .coupon .input-text,
+.woocommerce-page #content table.cart td.actions .coupon input,
+.woocommerce-page table.cart td.actions .coupon .button,
+.woocommerce-page table.cart td.actions .coupon .input-text,
+.woocommerce-page table.cart td.actions .coupon input {
+    width: 100%;
+}
+
+//Contact
+
+#ContactHome p {
+    @include media('<=mobile') {
+        font-size: 2.2rem !important;
+        line-height: 2.8rem !important;
+    }
+}
+
+//MobileNav
+header nav #menuLogo img {
+    @include media('<=mobile') {
+        width: 14.0rem;
+        margin-top: 0.8rem!important;
+    }
+}
+
+#toggleNav{
+    @include media('>mobile') {
+        display: none!important;
+    }
+    border: none!important;
+
+}
+
+#MobileNav{
+    @include media('>mobile') {
+        display: none!important;
+    }
+    display: none!important;
+    height: 100vh;
+    background-color: $color-red!important;
+    padding: 0rem 2rem!important;
+    position: fixed!important;
+    width: 100%;
+    top: 0vh;
+    &.visible{
+        display: block!important;
+        @include media('>mobile') {
+            display: none!important;
+        }
+    }
+    ul{
+        position: relative!important;
+        li{
+            display: block!important;
+            margin-top: 2rem!important;
+            margin-bottom: 3rem!important;
+            a{
+                color:#fff!important;
+                opacity: 1!important;
+                font-size: 3.2rem!important;
+                &.mobile-link i{
+                    display: none!important;
+                }
+       
+              
+            }
+        }
+    }
+    .toggle-nav-container{
+        text-align: right!important;
+    }
+    .toggle-nav{
+        font-size: 4.2rem!important;
+    }
 }
