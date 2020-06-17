@@ -39,7 +39,8 @@ if ( $show_downloads ) {
 	);
 }
 ?>
-<section class="woocommerce-order-details">
+
+<div class="woocommerce-order-details" >
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
 
 	<h2 class="woocommerce-order-details__title"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h2>
@@ -98,9 +99,23 @@ if ( $show_downloads ) {
 	</table>
 
 	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
-</section>
+</div>
+
+
+<div id="RendezVous">
+	<h2> Informations Pratiques </h2>
+		<p> Les ateliers Oenogusto se déroulent au sein des <a href="https://www.caves-carriere.fr/">Caves Carrière</a><br> 12 RUE DE SKOPJE<br>
+	21000 DIJON<br>TÉL. +33 (0)3 45 81 20 20</p>
+</div>
 
 <?php
 if ( $show_customer_details ) {
 	wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) );
-}
+} ?>
+</div>
+
+
+
+
+</section>
+<?php wp_footer() ?>

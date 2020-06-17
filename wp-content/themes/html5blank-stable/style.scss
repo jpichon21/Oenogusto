@@ -177,7 +177,11 @@ h5 {
     visibility: hidden;
 }
 
+
 /**/
+.post-edit-link{
+    display: none!important;
+}
 
 html {
     scroll-behavior: smooth;
@@ -462,6 +466,16 @@ form {
     margin-top: 3rem !important;
 }
 
+.wpcf7 .ajax-loader{
+    display: none!important;
+}
+
+.wpcf7-mail-sent-ok, .wpcf7-response-output{
+    border: none!important;
+    text-align: center!important;
+    font-size: 1.4rem;
+}
+
 .wpcf7-acceptance {
     padding: 1.4rem 0rem;
     text-align: left;
@@ -560,9 +574,31 @@ div.wpcf7-acceptance-missing,
     }
 }
 
+.woocommerce-order{
+    text-align: center;
+    h2{
+        font-size: 2rem!important;
+        color: $color-red!important;
+    }
+}
+
+.woocommerce-customer-details, #RendezVous{
+    background-color: white;
+    padding: 2rem 4rem;
+    margin: 2rem 0rem;
+    address{
+        text-align: center!important;
+        font-size: 1.6rem!important;
+        line-height: 2.8rem!important;
+        border: none!important;
+    }
+    
+}
+
 /** LAYOUT **/
 .woocommerce-products-header {
     display: none !important;
+ 
 }
 
 
@@ -1097,8 +1133,10 @@ section {
     }
 }
 
+
 #CartContainer,
-#CheckoutContainer {
+#CheckoutContainer,
+.woocommerce-order {
     .shop_table {
         border-radius: 0px;
         background-color: white;
