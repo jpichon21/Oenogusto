@@ -333,6 +333,9 @@ aside {
 .red {
   color: #930e0f; }
 
+.carousel-items .columns {
+  margin: 0rem 0rem !important; }
+
 /** FORM **/
 select {
   -webkit-appearance: none !important;
@@ -1387,3 +1390,7 @@ section .button {
     text-align: right !important; }
   #MobileNav .toggle-nav {
     font-size: 4.2rem !important; }
+
+@media (max-width: 1024px) {
+  .carousel-items .col-5 {
+    margin: 1.2rem 0rem; } }

@@ -7,10 +7,11 @@ $color-beige: #f7f6f3;
 $color-grey: #8a8988;
 $color-red: #930e0f;
 $color-black: #0e0e0e;
-$global-spacing: 20.6rem
+$global-spacing: 20.6rem;
 
 
 /*********FONTS*******/
+
 @font-face {
     font-family: 'Montserrat ExtraLight';
     src:
@@ -410,6 +411,12 @@ aside {
 
 .red {
     color: $color-red;
+}
+
+.carousel-items{ 
+    .columns{
+        margin: 0rem 0rem!important;
+    }
 }
 
 /** FORM **/
@@ -1876,7 +1883,6 @@ header nav #menuLogo img {
         display: none!important;
     }
     border: none!important;
-
 }
 
 #MobileNav{
@@ -1919,5 +1925,13 @@ header nav #menuLogo img {
     }
     .toggle-nav{
         font-size: 4.2rem!important;
+    }
+}
+
+.carousel-items{
+    .col-5{
+        @include media('<=mobile') {
+            margin: 1.2rem 0rem;
+        }
     }
 }
