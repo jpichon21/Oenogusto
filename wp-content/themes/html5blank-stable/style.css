@@ -923,8 +923,9 @@ section .button {
 #CartContainer #coupon_code,
 #CheckoutContainer #coupon_code,
 .woocommerce-order #coupon_code {
-  width: 12rem !important;
-  padding: 0.6rem; }
+  width: 100% !important;
+  padding: 0.6rem;
+  margin-bottom: 1rem; }
 
 #CartContainer .wc-proceed-to-checkout,
 #CheckoutContainer .wc-proceed-to-checkout,
