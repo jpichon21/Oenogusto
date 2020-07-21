@@ -74,7 +74,7 @@
 
                         <div class="col-5 video-container">
                             <video autoplay loop muted>
-                                <source src="<?php echo get_template_directory_uri(); ?>/video/video-1.mov">
+                                <source src="<?php echo get_template_directory_uri(); ?>/video/video-1.mp4">
                             </video>
                    
                         </div>
@@ -90,7 +90,7 @@
 
                     <div class="col-5 video-container">
                             <video autoplay loop muted>
-                                <source src="<?php echo get_template_directory_uri(); ?>/video/video-2.mov">
+                                <source src="<?php echo get_template_directory_uri(); ?>/video/video-2.mp4">
                             </video>
                    
                         </div>

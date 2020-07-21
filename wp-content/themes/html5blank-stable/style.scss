@@ -1,6 +1,6 @@
 @import 'include-media.scss';
 /*******BREAKPOINTS********/
-$breakpoints: ( mobile: 1024px, large: 1024px, xlarge: 1280px, cardbkp: 1298px, xxlarge: 1440px, laptop: 1680px, hirez: 1780px);
+$breakpoints: (mobile: 1024px, large: 1024px, xlarge: 1280px, cardbkp: 1298px, xxlarge: 1440px, laptop: 1680px, hirez: 1780px);
 
 /*******VARIABLES*********/
 $color-beige: #f7f6f3;
@@ -95,6 +95,7 @@ $global-spacing: 20.6rem;
     font-style: normal;
 }
 
+
 /***********************/
 /******** ADOBE ********/
 /***********************/
@@ -179,8 +180,8 @@ h5 {
 
 
 /**/
-.post-edit-link{
-    display: none!important;
+.post-edit-link {
+    display: none !important;
 }
 
 html {
@@ -417,9 +418,9 @@ aside {
     color: $color-red;
 }
 
-.carousel-items{ 
-    .columns{
-        margin: 0rem 0rem!important;
+.carousel-items {
+    .columns {
+        margin: 0rem 0rem !important;
     }
 }
 
@@ -466,13 +467,14 @@ form {
     margin-top: 3rem !important;
 }
 
-.wpcf7 .ajax-loader{
-    display: none!important;
+.wpcf7 .ajax-loader {
+    display: none !important;
 }
 
-.wpcf7-mail-sent-ok, .wpcf7-response-output{
-    border: none!important;
-    text-align: center!important;
+.wpcf7-mail-sent-ok,
+.wpcf7-response-output {
+    border: none !important;
+    text-align: center !important;
     font-size: 1.4rem;
 }
 
@@ -574,39 +576,43 @@ div.wpcf7-acceptance-missing,
     }
 }
 
-.woocommerce-order{
+.woocommerce-order {
     text-align: center;
-    h2{
-        font-size: 2rem!important;
-        color: $color-red!important;
+
+    h2 {
+        font-size: 2rem !important;
+        color: $color-red !important;
     }
 }
 
-.woocommerce-customer-details, #RendezVous{
+.woocommerce-customer-details,
+#RendezVous {
     background-color: white;
     padding: 2rem 4rem;
     margin: 2rem 0rem;
-    address{
-        text-align: center!important;
-        font-size: 1.6rem!important;
-        line-height: 2.8rem!important;
-        border: none!important;
+
+    address {
+        text-align: center !important;
+        font-size: 1.6rem !important;
+        line-height: 2.8rem !important;
+        border: none !important;
     }
-    
+
 }
 
 /** LAYOUT **/
 .woocommerce-products-header {
     display: none !important;
- 
+
 }
 
 
 
 body {
     padding: 2rem;
+
     @include media('<=mobile') {
-        padding: 0rem!important;
+        padding: 0rem !important;
     }
 
     .wrapper {
@@ -1261,6 +1267,7 @@ section {
     }
 }
 
+
 #ProductCardContainer {
     position: relative;
 
@@ -1630,9 +1637,9 @@ blockquote {
 }
 
 //Mobile Nav
-.main-nav{
+.main-nav {
     @include media('<=mobile') {
-        display: none!important;
+        display: none !important;
     }
 }
 
@@ -1850,6 +1857,17 @@ h2 {
     }
 }
 
+#CheckoutContainer {
+    .gift-certificate.sc_info_box {
+        background-color: white;
+        padding: 2rem !important;
+    }
+
+    .gift-certificate-show-form {
+        font-size: 1.6rem;
+    }
+}
+
 
 .woocommerce-cart-form__contents {
     @include media('<=mobile') {
@@ -1913,62 +1931,72 @@ h2 {
 header nav #menuLogo img {
     @include media('<=mobile') {
         width: 14.0rem;
-        margin-top: 0.8rem!important;
+        margin-top: 0.8rem !important;
     }
 }
 
-#toggleNav{
+#toggleNav {
     @include media('>mobile') {
-        display: none!important;
+        display: none !important;
     }
-    border: none!important;
+
+    border: none !important;
 }
 
-#MobileNav{
+#MobileNav {
     @include media('>mobile') {
-        display: none!important;
+        display: none !important;
     }
-    display: none!important;
+
+    display: none !important;
     height: 100vh;
-    background-color: $color-red!important;
-    padding: 0rem 2rem!important;
-    position: fixed!important;
+    background-color: $color-red !important;
+    padding: 0rem 2rem !important;
+    position: fixed !important;
     width: 100%;
     top: 0vh;
-    &.visible{
-        display: block!important;
+
+    &.visible {
+        display: block !important;
+
         @include media('>mobile') {
-            display: none!important;
+            display: none !important;
         }
     }
-    ul{
-        position: relative!important;
-        li{
-            display: block!important;
-            margin-top: 2rem!important;
-            margin-bottom: 3rem!important;
-            a{
-                color:#fff!important;
-                opacity: 1!important;
-                font-size: 3.2rem!important;
-                &.mobile-link i{
-                    display: none!important;
+
+    ul {
+        position: relative !important;
+
+        li {
+            display: block !important;
+            margin-top: 2rem !important;
+            margin-bottom: 3rem !important;
+
+            a {
+                color: #fff !important;
+                opacity: 1 !important;
+                font-size: 3.2rem !important;
+
+                &.mobile-link i {
+                    display: none !important;
                 }
-       
-              
+
+
             }
         }
     }
-    .toggle-nav-container{
-        text-align: right!important;
+
+    .toggle-nav-container {
+        text-align: right !important;
     }
-    .toggle-nav{
-        font-size: 4.2rem!important;
+
+    .toggle-nav {
+        font-size: 4.2rem !important;
     }
 }
 
-.carousel-items{
-    .col-5{
+.carousel-items {
+    .col-5 {
         @include media('<=mobile') {
             margin: 1.2rem 0rem;
         }

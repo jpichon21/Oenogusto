@@ -373,7 +373,8 @@ form input[type="submit"] {
 .wpcf7 .ajax-loader {
   display: none !important; }
 
-.wpcf7-mail-sent-ok, .wpcf7-response-output {
+.wpcf7-mail-sent-ok,
+.wpcf7-response-output {
   border: none !important;
   text-align: center !important;
   font-size: 1.4rem; }
@@ -459,11 +460,13 @@ div.wpcf7-acceptance-missing,
     font-size: 2rem !important;
     color: #930e0f !important; }
 
-.woocommerce-customer-details, #RendezVous {
+.woocommerce-customer-details,
+#RendezVous {
   background-color: white;
   padding: 2rem 4rem;
   margin: 2rem 0rem; }
-  .woocommerce-customer-details address, #RendezVous address {
+  .woocommerce-customer-details address,
+  #RendezVous address {
     text-align: center !important;
     font-size: 1.6rem !important;
     line-height: 2.8rem !important;
@@ -1348,6 +1351,13 @@ section .button {
   #CartContainer .col-9,
   #CheckoutContainer .col-9 {
     width: 90% !important; } }
+
+#CheckoutContainer .gift-certificate.sc_info_box {
+  background-color: white;
+  padding: 2rem !important; }
+
+#CheckoutContainer .gift-certificate-show-form {
+  font-size: 1.6rem; }
 
 @media (max-width: 1024px) {
   .woocommerce-cart-form__contents {

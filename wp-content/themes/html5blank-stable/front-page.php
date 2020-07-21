@@ -50,7 +50,7 @@
                     <blockquote>
                         Titulaire d’un Doctorat en Œnologie, obtenu à
                         l’Institut Universitaire de la Vigne et du Vin, à Dijon, j’ai notamment travaillé sur l’origine
-                        et l’identification des arômes du cépage emblématique de la Bourgogne qu’est Pinot noir.
+                        et l’identification des arômes du cépage emblématique de la Bourgogne qu’est le Pinot noir.
                     </blockquote>
                 </div>
 
