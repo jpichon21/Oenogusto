@@ -105,7 +105,8 @@ if ( $show_downloads ) {
 <div id="RendezVous">
 	<h2> Informations Pratiques </h2>
 		<p> Les ateliers Oenogusto se déroulent au sein des <a href="https://www.caves-carriere.fr/">Caves Carrière</a><br> 12 RUE DE SKOPJE<br>
-	21000 DIJON<br>TÉL. +33 (0)3 45 81 20 20</p>
+	21000 DIJON<br>TÉL. +33 (0)3 45 81 20 20</p><br>
+	<p class="red">Afin que l'expérience sensorielle soit la plus réussie possible, merci d'éviter toutes sources olfactives potentiellement parasites telles que le parfum.</p>
 </div>
 
 <?php
