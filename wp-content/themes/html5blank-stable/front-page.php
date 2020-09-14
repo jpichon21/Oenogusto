@@ -114,7 +114,7 @@
                                 <div class="col-2"></div>
 
                                 <div class="col-5">
-                                    <h3 class="red">Prochaine Session : <span class="date"><?php echo $session ?></span></h3>
+                                    <h3 class="red"><span class="date"><?php echo $session ?></span></h3>
                                     <h2><?php echo $titre ?></span></h2>
                                     <p>
                                         <?php echo $description ?>

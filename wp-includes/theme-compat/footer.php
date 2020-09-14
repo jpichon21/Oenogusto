@@ -32,9 +32,9 @@ _deprecated_file(
                 </div>
 
                 <div class="col-5 text-right">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/Oenogusto-ateliers-oenologiques-107613481013081/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/oenogusto/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/catherine-massoutier-ziadi-44049b192/"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
 

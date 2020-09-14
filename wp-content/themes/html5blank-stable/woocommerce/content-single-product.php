@@ -134,6 +134,8 @@ if ( post_password_required() ) {
 								?>
 									<span class="disclaimer">IMPORTANT : En réservant cet article, vous certifiez être âgé de
 								plus de 18 ans. </span>
+
+								<span>S'il ne reste plus assez de places disponibles : <a href="./contact">Contactez-moi</a>, je vous proposerai les meilleures solutions !</span>
 						</div>
 
 

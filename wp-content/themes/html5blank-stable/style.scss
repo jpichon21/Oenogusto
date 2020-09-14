@@ -1405,6 +1405,9 @@ section {
     #ui-datepicker-div {
         width: 100% !important;
     }
+    .ui-datepicker-unselectable, #ProductCardContainer td.ui-datepicker-current-day, #ProductCardContainer td:not(.ui-state-disabled):hover{
+        background-color: #c7c5c5;
+    }
 
     td.ui-datepicker-current-day,
     td:not(.ui-state-disabled):hover {
