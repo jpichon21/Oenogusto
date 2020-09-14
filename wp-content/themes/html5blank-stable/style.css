@@ -682,8 +682,8 @@ section .button {
     width: 100%;
     margin-top: 6rem; }
 
-#QuoteContainer #QuoteTextContainer {
-  padding-top: 18rem; }
+#QuoteContainer #QuoteTextContainer img {
+  margin-bottom: 6rem; }
 
 #AteliersCTA {
   margin-bottom: 18rem !important; }
@@ -1224,10 +1224,6 @@ section .button {
 @media (max-width: 1024px) {
   #QuoteContainer {
     padding: 6rem 0rem !important; } }
-
-@media (max-width: 1024px) {
-  #QuoteTextContainer {
-    padding: 12rem 0rem 0rem 0rem !important; } }
 
 @media (max-width: 1024px) {
   #AteliersCTA {

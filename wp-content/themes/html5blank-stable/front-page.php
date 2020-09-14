@@ -46,12 +46,18 @@
         <section id="QuoteContainer" class="col-9 centered" data-scroll-section>
             <div class="row columns">
 
+            <div class="col-12">
+               
+            </div>
+
                 <div class="col-5" id="QuoteBlockquoteContainer" data-scroll-speed="1">
                     <blockquote>
                         Titulaire d’un Doctorat en Œnologie, obtenu à
                         l’Institut Universitaire de la Vigne et du Vin, à Dijon, j’ai notamment travaillé sur l’origine
                         et l’identification des arômes du cépage emblématique de la Bourgogne qu’est le Pinot noir.
                     </blockquote>
+
+                    
                 </div>
 
                 <div class="col-1 separator">
@@ -64,6 +70,7 @@
                 </div>
 
                 <div class="col-5" id="QuoteTextContainer" data-scroll-speed="1">
+                    <img style="width:100%" src="<?php echo get_template_directory_uri(); ?>/img/catherine-ziadi.jpg">
                     <p>... pour autant, l'approche et les ateliers diversifiés que je vous propose n'ont <span
                             class="red">rien d'académiques.</span>
                         <p>

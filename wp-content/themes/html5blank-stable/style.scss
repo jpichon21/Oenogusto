@@ -919,7 +919,10 @@ section {
 
 #QuoteContainer {
     #QuoteTextContainer {
-        padding-top: 18rem;
+        //padding-top: 18rem;
+        img{
+            margin-bottom: 6rem;
+        }
     }
 }
 
@@ -1668,7 +1671,7 @@ blockquote {
 
 #QuoteTextContainer {
     @include media('<=mobile') {
-        padding: 12rem 0rem 0rem 0rem !important;
+        //padding: 12rem 0rem 0rem 0rem !important;
     }
 }
 
