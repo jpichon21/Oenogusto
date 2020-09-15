@@ -1669,6 +1669,12 @@ blockquote {
     }
 }
 
+#QuoteBlockContainer{
+        @include media('<=mobile') {
+            margin-bottom: 5.2rem;
+        }
+}
+
 #QuoteTextContainer {
     @include media('<=mobile') {
         //padding: 12rem 0rem 0rem 0rem !important;

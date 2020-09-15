@@ -1226,6 +1226,10 @@ section .button {
     padding: 6rem 0rem !important; } }
 
 @media (max-width: 1024px) {
+  #QuoteBlockContainer {
+    margin-bottom: 5.2rem; } }
+
+@media (max-width: 1024px) {
   #AteliersCTA {
     margin-bottom: 0rem !important; } }
 
