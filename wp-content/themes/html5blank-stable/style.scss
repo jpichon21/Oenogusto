@@ -922,6 +922,9 @@ section {
         //padding-top: 18rem;
         img{
             margin-bottom: 6rem;
+            @include media('<=mobile') {
+                margin-top: 5.2rem;
+            }
         }
     }
 }
@@ -1667,12 +1670,6 @@ blockquote {
     @include media('<=mobile') {
         padding: 6rem 0rem !important;
     }
-}
-
-#QuoteBlockContainer{
-        @include media('<=mobile') {
-            margin-bottom: 5.2rem;
-        }
 }
 
 #QuoteTextContainer {
