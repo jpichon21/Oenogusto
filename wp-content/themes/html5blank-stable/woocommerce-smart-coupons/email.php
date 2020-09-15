@@ -79,7 +79,7 @@ if ( has_action( 'woocommerce_email_header' ) ) {
 <p>
 <?php
 	/* translators: %s: Coupon code */
-	echo sprintf( esc_html__( 'our profiter de votre carte cadeau, entrez ce code en réservant votre atelier sur oenogusto.fr :', 'woocommerce-smart-coupons' ), '<strong><code>' . esc_html( $coupon_code ) . '</code></strong>' );
+	echo sprintf( esc_html__( 'Pour profiter de votre carte cadeau, entrez ce code en réservant votre atelier sur oenogusto.fr :', 'woocommerce-smart-coupons' ), '<strong><code>' . esc_html( $coupon_code ) . '</code></strong>' );
 ?>
 </p>
 
@@ -169,7 +169,7 @@ if ( ! empty( $coupon_target ) ) {
 				$expiry_date = $woocommerce_smart_coupon->get_expiration_format( $expiry_date );
 				echo '<div class="coupon-expire">' . esc_html( $expiry_date ) . '</div>';
 			} else {
-				echo '<div class="coupon-expire">' . esc_html__( 'Never Expires ', 'woocommerce-smart-coupons' ) . '</div>';
+				echo '<div class="coupon-expire">' . esc_html__( 'Valable une fois ', 'woocommerce-smart-coupons' ) . '</div>';
 			}
 				echo '</div>';
 			?>
