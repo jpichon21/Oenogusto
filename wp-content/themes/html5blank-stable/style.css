@@ -1114,7 +1114,7 @@ section .button {
   .woocommerce-message a,
   .woocommerce-message p {
     font-family: 'Montserrat Regular', sans-serif !important;
-    font-size: 1.4rem; }
+    font-size: 1.6rem; }
   .woocommerce-error:before,
   .woocommerce-info:before,
   .woocommerce-message:before {
@@ -1128,7 +1128,7 @@ section .button {
 .btn.btn-clear {
   font-size: 1.6rem !important;
   padding: 1rem !important;
-  opacity: 0.3 !important; }
+  opacity: 1 !important; }
 
 #post-21 .order_details {
   text-align: center;
