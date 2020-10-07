@@ -1501,7 +1501,7 @@ section {
     p {
         font-family: 'Montserrat Regular', sans-serif !important;
         font-size: 1.6rem;
-    }
+}
 
     &:before {
         display: none !important;
@@ -1511,11 +1511,15 @@ section {
         color: $color-red !important;
         display: block;
     }
-}
+    .woocommerce-error, .woocommerce-NoticeGroup .woocommerce-NoticeGroup-checkout{
+        .woocommerce-error{
+            li{
+                font-size: 1.6rem;
+            }
+        }
+    }
 
-.woocommerce-form.woocommerce-form-login.login {
-    //display: none !important;
-}
+} 
 
 .btn.btn-clear {
     font-size: 1.6rem !important;

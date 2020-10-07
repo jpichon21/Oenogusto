@@ -1124,6 +1124,12 @@ section .button {
   .woocommerce-message a {
     color: #930e0f !important;
     display: block; }
+  .woocommerce-error .woocommerce-error .woocommerce-error li, .woocommerce-error .woocommerce-NoticeGroup .woocommerce-NoticeGroup-checkout .woocommerce-error li,
+  .woocommerce-info .woocommerce-error .woocommerce-error li,
+  .woocommerce-info .woocommerce-NoticeGroup .woocommerce-NoticeGroup-checkout .woocommerce-error li,
+  .woocommerce-message .woocommerce-error .woocommerce-error li,
+  .woocommerce-message .woocommerce-NoticeGroup .woocommerce-NoticeGroup-checkout .woocommerce-error li {
+    font-size: 1.6rem; }
 
 .btn.btn-clear {
   font-size: 1.6rem !important;
