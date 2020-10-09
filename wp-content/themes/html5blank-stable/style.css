@@ -521,6 +521,26 @@ footer {
   left: 6rem;
   background: linear-gradient(180deg, #f7f6f3 0%, rgba(247, 246, 243, 0.473119) 55%, rgba(0, 212, 255, 0) 100%); }
 
+#scrollArrow {
+  font-family: 'Montserrat Regular';
+  font-size: 2.0rem;
+  line-height: 2.4rem;
+  color: #930e0f;
+  transition: 0.5s ease;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.6rem;
+  opacity: 0.5;
+  position: fixed;
+  right: calc(50vw - 0.6rem);
+  bottom: 1.2rem;
+  transition: 0.5s ease;
+  transform: scale(1);
+  /*:hover, :focus, :active{
+            color: $color-red;
+            transition: 0.5s ease;
+            transform: scale(1.1);
+        }*/ }
+
 header {
   z-index: 10;
   position: absolute;

@@ -57,6 +57,12 @@
 				$('.modal').removeClass('active');
 			});
 		});
+
+		function scrollNow() {
+
+			//let pageHeight = window.innerHeight;
+			//window.scrollBy(0, pageHeight);
+		}
 	</script>
 	<!-- -->
 
@@ -137,8 +143,8 @@
 						<li><a class="main-nav" id="cartNav" href="<?php echo get_permalink('17'); ?>"><i
 									class="fas fa-shopping-cart" style="margin-right:0.6rem"></i>Panier</a></li>
 
-						<li onclick="toggleNav()"><a class="mobile-nav toggle-nav" id="toggleNav" href="#"><i class="fas fa-bars"
-									style="font-size: 3.2rem; margin-right:0.6rem;"></i></a></li>
+						<li onclick="toggleNav()"><a class="mobile-nav toggle-nav" id="toggleNav" href="#"><i
+									class="fas fa-bars" style="font-size: 3.2rem; margin-right:0.6rem;"></i></a></li>
 
 					</ul>
 				</nav>
@@ -146,18 +152,21 @@
 				<nav id="MobileNav">
 					<ul>
 
-						<li onclick="toggleNav()" class="toggle-nav-container"><a class="toggle-nav" href="#"><i class="fas fa-times"
-									style="margin-right:0.6rem;"></i></a></li>
+						<li onclick="toggleNav()" class="toggle-nav-container"><a class="toggle-nav" href="#"><i
+									class="fas fa-times" style="margin-right:0.6rem;"></i></a></li>
 
 						<li><a class="mobile-link" id="accueil" href="./home">Accueil</a></li>
-						<li><a  class="mobile-link"id="ateliersNav" href="<?php echo get_permalink('13'); ?>">Ateliers</a></li>
+						<li><a class="mobile-link" id="ateliersNav"
+								href="<?php echo get_permalink('13'); ?>">Ateliers</a></li>
 
-						<li><a class="mobile-link" id="entrepriseNav" href="<?php echo get_permalink('25'); ?>">Entreprises</a></li>
-						<li><a class="mobile-link" id="contactNav" href="<?php echo get_permalink('9'); ?>">Contact</a></li>
-						<li><a class="mobile-link" id="accountNav" href="<?php echo get_permalink('22'); ?>"><i class="fas fa-user"
-									style="margin-right:0.6rem"></i>Compte</a></li>
-						<li><a class="mobile-link" id="cartNav" href="<?php echo get_permalink('17'); ?>"><i class="fas fa-shopping-cart"
-									style="margin-right:0.6rem"></i>Panier</a></li>
+						<li><a class="mobile-link" id="entrepriseNav"
+								href="<?php echo get_permalink('25'); ?>">Entreprises</a></li>
+						<li><a class="mobile-link" id="contactNav" href="<?php echo get_permalink('9'); ?>">Contact</a>
+						</li>
+						<li><a class="mobile-link" id="accountNav" href="<?php echo get_permalink('22'); ?>"><i
+									class="fas fa-user" style="margin-right:0.6rem"></i>Compte</a></li>
+						<li><a class="mobile-link" id="cartNav" href="<?php echo get_permalink('17'); ?>"><i
+									class="fas fa-shopping-cart" style="margin-right:0.6rem"></i>Panier</a></li>
 
 
 
@@ -169,7 +178,7 @@
 						var target = document.getElementById("MobileNav");
 						target.classList.toggle("visible");
 					}
-
 				</script>
+				<span onclick="scrollNow()" id="scrollArrow"><i class="fa fa-angle-down"></i> </span>
 			</header>
 		</div>
