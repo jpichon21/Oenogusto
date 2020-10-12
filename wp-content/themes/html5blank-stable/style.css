@@ -523,7 +523,7 @@ footer {
 
 #scrollArrow {
   font-family: 'Montserrat Regular';
-  font-size: 2.0rem;
+  font-size: 2.4rem;
   line-height: 2.4rem;
   color: #930e0f;
   transition: 0.5s ease;
@@ -532,7 +532,7 @@ footer {
   opacity: 0.5;
   position: fixed;
   right: calc(50vw - 0.6rem);
-  bottom: 1.2rem;
+  bottom: 2.2rem;
   transition: 0.5s ease;
   transform: scale(1);
   /*:hover, :focus, :active{
@@ -1069,7 +1069,9 @@ section .button {
     #ProductCardContainer .yith-wcbk-booking-form select {
       margin: 0px; }
   #ProductCardContainer #ui-datepicker-div {
-    width: 100% !important; }
+    width: 100% !important;
+    z-index: 10 !important;
+    margin-top: -42px !important; }
   #ProductCardContainer .ui-datepicker-unselectable, #ProductCardContainer #ProductCardContainer td.ui-datepicker-current-day, #ProductCardContainer #ProductCardContainer td:not(.ui-state-disabled):hover {
     background-color: #c7c5c5; }
   #ProductCardContainer td.ui-datepicker-current-day,
@@ -1477,3 +1479,12 @@ section .button {
 @media (max-width: 1024px) {
   .carousel-items .col-5 {
     margin: 1.2rem 0rem; } }
+
+.ui-state-disabled {
+  display: none; }
+
+.ui-datepicker-calendar thead {
+  display: none; }
+
+.ui-datepicker-week-end {
+  width: 100%; }

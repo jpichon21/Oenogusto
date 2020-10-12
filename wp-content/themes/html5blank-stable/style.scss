@@ -683,7 +683,7 @@ footer {
 
 #scrollArrow{
         font-family: 'Montserrat Regular';
-        font-size: 2.0rem;
+        font-size: 2.4rem;
         line-height: 2.4rem;
         color: $color-red;
         transition: 0.5s ease;
@@ -692,7 +692,7 @@ footer {
         opacity: 0.5;
         position: fixed;
         right: calc(50vw - 0.6rem);
-        bottom: 1.2rem;
+        bottom: 2.2rem;
        // cursor: pointer;
         transition: 0.5s ease;
         transform: scale(1);
@@ -1402,6 +1402,8 @@ section {
         font-size: 1.4rem;
     }
 
+ 
+
     .tabs.wc-tabs,
     h2 {
         display: none !important;
@@ -1432,7 +1434,10 @@ section {
 
     #ui-datepicker-div {
         width: 100% !important;
+        z-index: 10!important;
+        margin-top: -42px!important;
     }
+    
     .ui-datepicker-unselectable, #ProductCardContainer td.ui-datepicker-current-day, #ProductCardContainer td:not(.ui-state-disabled):hover{
         background-color: #c7c5c5;
     }
@@ -2036,4 +2041,20 @@ header nav #menuLogo img {
             margin: 1.2rem 0rem;
         }
     }
+}
+
+//Test Datepicker//
+
+.ui-state-disabled {
+    display: none;
+}
+
+.ui-datepicker-calendar{
+    thead{
+        display: none;
+    }
+}
+
+.ui-datepicker-week-end {
+    width: 100%;
 }
